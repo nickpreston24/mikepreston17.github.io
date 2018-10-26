@@ -1,12 +1,18 @@
 /*	Author: Michael Preston
  *	Created Date: "10-26-2018"
  */
+const MOVE_INTERVAL = 3000;
+
+var interval;
+
 jQuery(document).ready(function ($) {
 
     $('#checkbox').change(function () {
-        setInterval(function () {
-            moveRight();
-        }, 3000);
+        if (this.checked) {
+            interval = setInterval(function () {
+                moveRight();
+            }, MOVE_INTERVAL);
+        } else clearInterval(interval);
     });
 
     var slideCount = $('#slider ul li').length;
