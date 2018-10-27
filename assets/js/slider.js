@@ -1,8 +1,9 @@
 /*	Author: Michael Preston
  *	Created Date: "10-26-2018"
+ *  TODOs:
+ *  1. Skips a color index when rotating().
  */
 const MOVE_INTERVAL = 3000;
-
 var interval;
 
 jQuery(document).ready(function ($) {
@@ -10,20 +11,20 @@ jQuery(document).ready(function ($) {
     $('#checkbox').change(function () {
         if (this.checked) {
             interval = setInterval(function () {
-                shiftColor();
+                shiftColor(1);
                 moveRight();
             }, MOVE_INTERVAL);
         } else if (!this.checked) clearInterval(interval);
     });
 
     //Hex codes only (nothing like 'cyan'), no RGB support at the moment:
-    var backgroundColors = ['#91ea5e', '#600613', '#1d1075', '#0ff', '#101', '#555555', "#b00b00", "#de1e7e", "#e1e100", "#BADA55", "#F0FEAF", "#ac1d1c", "#facade", "c20773"];
+    var backgroundColors = ['#612af3', '#91ea5e', '#600613', '#0ff', "#b00b00", "#de1e7e", "#e1e100", "#BADA55", "#F0FEAF", "#ac1d1c", "#f1e", "#c20773", '#c001ed', '#10ADE2', '#DBZ'];
+    var currentColor = 0;
 
     var slideCount = $('#slider ul li').length;
     var slideWidth = $('#slider ul li').width();
     var slideHeight = $('#slider ul li').height();
     var sliderUlWidth = slideCount * slideWidth;
-
 
     $('#slider').css({
         width: slideWidth,
@@ -57,12 +58,18 @@ jQuery(document).ready(function ($) {
         });
     };
 
-    function shiftColor(goRight) {
-        rotateColors(backgroundColors);
-        let current = backgroundColors[goRight ? 0 : 1];
-        // let comp = complement(backgroundColors[goRight ? 1 : 0]);
-        renderColors(current);
-        // $('a').css('color', backgroundColors[goRight ? 1 : 0]);
+    function shiftColor(value) {
+        value = value || 0;
+
+        let hitBounds = (currentColor + value) % (backgroundColors.length) <= 0;
+        currentColor = hitBounds ? (value > 0) ? 0 : backgroundColors.length + value : currentColor + value;
+
+        let color = backgroundColors[currentColor];
+        let comp = complement(color);
+
+        $('li').css('background-color', color);
+        $('a').css('color', comp);
+        $('h1').text(color)
     }
 
     function renderColors(color) {
@@ -71,17 +78,15 @@ jQuery(document).ready(function ($) {
         $('a').css('color', comp);
     }
 
-    function rotateColors(colors) {
-        rotate(colors);
-    }
-
     $('a.control_prev').click(function () {
-        shiftColor(false);
+        rotate(backgroundColors, true);
+        shiftColor(-1);
         moveLeft();
     });
 
     $('a.control_next').click(function () {
-        shiftColor(true);
+        rotate(backgroundColors, false);
+        shiftColor(1);
         moveRight();
     });
 
@@ -94,6 +99,7 @@ jQuery(document).ready(function ($) {
     }
 
 });
+
 /*
  * From Stack Overflow:
  * https://stackoverflow.com/questions/1664140/js-function-to-calculate-complementary-colour#1664186
