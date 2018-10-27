@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
 
         $('li').css('background-color', color);
         $('a').css('color', comp);
-        $('h1').text(color)
+        // $('h1').text(color); //debug only
     }
 
     function renderColors(color) {
