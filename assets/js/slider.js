@@ -215,3 +215,4 @@ function min3(a, b, c) {
 function max3(a, b, c) {
     return (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
 }
+console.log('slider.js()', );

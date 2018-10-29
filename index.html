@@ -5,17 +5,29 @@
 
 <head>
     <title>Michael Preston</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="assets/css/slider-style.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Slider logic -->
     <script src="assets/js/slider.js"></script>
+    <!-- Main logic -->
     <script src="assets/js/index.js"></script>
+
 </head>
 
 <body>
     <h1 class="slider">SMU Full Stack Development</h1>
 
-    <div id="slider">
+    <!-- Adding React -->
+    <div id="like_button_container">
+
+    </div>
+
+    <div id="slider" class="slider">
         <a href="#" class="control_next">></a>
         <a href="#" class="control_prev">
             <</a> <ul>
@@ -29,6 +41,13 @@
 
     </div>
 
-    <div class="slider_option">
+    <!-- React -->
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+
+    <!-- loading custom React component -->
+    <script src="assets/js/like_button.js"></script>
+
+</body>
 
 </html>
