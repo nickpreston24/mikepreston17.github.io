@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="assets/css/slider-style.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script> -->
+
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -20,40 +28,77 @@
 </head>
 
 <body>
-    <h1 class="slider">SMU Full Stack Development</h1>
 
-    <!-- Adding React -->
-    <div id="like_button_container">
+    <header>
+        <div class="container center">
+            <h1 class="name">Michael Preston</h1>
+            <!-- <h2 class="slider">SMU Full Stack Development</h1> -->
+            <!-- <div class="menu">
+                <a href="index.html" class="link">About</a>
+                <a href="portfolio.html" class="link">Portfolio</a>
+                <a href="contact.html" class="link">Contact</a>
+            </div> -->
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="col-mid-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem commodi perferendis dolores ipsum at
+                totam,
+                nemo illum, distinctio illo expedita aspernatur? Distinctio aspernatur quam doloribus consequatur vero
+                quas
+                illo nihil!</p>
+        </div>
+
+        <div class="col-mid-3">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem vero at labore ut, necessitatibus
+                excepturi minus aperiam laudantium, odit magnam rerum. Modi assumenda, reiciendis iure tenetur harum
+                aliquid veritatis consequatur.</p>
+        </div>
+
+        <div class="col-mid-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut unde corrupti dignissimos corporis placeat
+            mollitia quam facere deserunt, consectetur et provident quia quibusdam tempore sapiente nobis quaerat hic.
+            Iusto, in!
+        </div>
+
+        <div id="like_button_container"></div>
+
+
+
+        <!-- Custom Slider -->
+        <div id="slider" class="slider">
+            <a href="#" class="control_next">></a>
+            <!-- todo: add these lis dynamically -->
+            <a href="#" class="control_prev">
+                <</a> <ul>
+
+                    <li><a target="_blank" href="https://mikepreston17.github.io/GifTastic/">Gif-Tastic</a></li>
+                    <li><a target="_blank" href="https://github.com/MikePreston17/DesignPatterns">Design Patterns</a></li>
+                    <li><a target="_blank" href="https://github.com/MikePreston17/DynamicXml">XML To POCOs</a></li>
+                    <li><a target="_blank" href="https://mikepreston17.github.io/RPS-Multiplayer/" target="_blank">RPS-Multiplayer</a></li>
+                    <li><a target="_blank" href="https://mikepreston17.github.io/LocoMoment/" target="_blank">Loco-Moment</a></li>
+                    <li><a target="_blank" href="https://github.com/MikePreston17/liri-node-app/" target="_blank">LIRI
+                            Bot</a></li>
+                    <li><a target="_blank" href="https://github.com/MikePreston17/bamazon/" target="_blank">Bamazon</a></li>
+                    </ul>
+        </div>
+        <br>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">Autoplay</label>
+
+        <!-- </div> -->
+
+
+        <!-- React -->
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+
+        <!-- loading custom React component -->
+        <script src="assets/js/like_button.min.jsx"></script>
 
     </div>
-
-    <!-- Custom Slider -->
-    <div id="slider" class="slider">
-        <a href="#" class="control_next">></a>
-        <!-- todo: add these lis dynamically -->
-        <a href="#" class="control_prev">
-            <</a> <ul>
-
-                <li><a target="_blank" href="https://mikepreston17.github.io/GifTastic/">Gif-Tastic</a></li>
-                <li><a target="_blank" href="https://github.com/MikePreston17/DesignPatterns">Design Patterns</a></li>
-                <li><a target="_blank" href="https://github.com/MikePreston17/DynamicXml">XML To POCOs</a></li>
-                <li><a href="https://mikepreston17.github.io/RPS-Multiplayer/" target="_blank">RPS-Multiplayer</a></li>
-                <li><a href="https://mikepreston17.github.io/LocoMoment/" target="_blank">Loco-Moment</a></li>
-                <li><a href="https://github.com/MikePreston17/liri-node-app/" target="_blank">LIRI Bot</a></li>
-                <li><a href="https://github.com/MikePreston17/bamazon/" target="_blank">Bamazon</a></li>
-                </ul>
-    </div>
-    <input type="checkbox" id="checkbox">
-    <label for="checkbox">Autoplay</label>
-
-    </div>
-
-    <!-- React -->
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-
-    <!-- loading custom React component -->
-    <script src="assets/js/like_button.min.jsx"></script>
 
 </body>
 

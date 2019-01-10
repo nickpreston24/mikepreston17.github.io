@@ -1,9 +1,5 @@
-
-
 html,
 body {
-    margin: 0;
-    padding: 0;
     font-family: Monda, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
@@ -11,4 +7,15 @@ body {
     --spacer-sm: .5rem;
     --spacer-md: 1rem;
     --spacer-lg: 2rem;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    width: 960px;
+}
+
+div.center {
+    display: flex;
+    align-items: center;
 }

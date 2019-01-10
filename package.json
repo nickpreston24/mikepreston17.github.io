@@ -1,25 +1,25 @@
 {
-  "name": "mikepreston17.github.io",
-  "version": "1.0.0",
-  "description": "Creations Portfolio",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MikePreston17/mikepreston17.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MikePreston17/mikepreston17.github.io/issues"
-  },
-  "homepage": "https://github.com/MikePreston17/mikepreston17.github.io#readme",
-  "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2",
-    "uglify-es": "^3.3.9"
-  }
+    "name": "mikepreston17.github.io",
+    "version": "1.0.0",
+    "description": "Creations Portfolio",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MikePreston17/mikepreston17.github.io.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MikePreston17/mikepreston17.github.io/issues"
+    },
+    "homepage": "https://github.com/MikePreston17/mikepreston17.github.io#readme",
+    "dependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-react-app": "^3.1.2",
+        "uglify-es": "^3.3.9"
+    }
 }
