@@ -65,32 +65,32 @@ jQuery(document).ready(function ($) {
         currentColor = hitBounds ? (value > 0) ? 0 : backgroundColors.length + value : currentColor + value;
 
         let color = backgroundColors[currentColor];
-        let comp = complement(color);
+        let complement = getComplement(color);
 
         $('li').css('background-color', color);
-        $('a').css('color', comp);
+        $('a').css('color', complement);
         // $('h1').text(color); //debug only
     }
 
     function renderColors(color) {
-        let comp = complement(color);
+        let complement = getComplement(color);
         $('li').css('background-color', color);
-        $('a').css('color', comp);
+        $('a').css('color', complement);
     }
 
     $('a.control_prev').click(function () {
-        rotate(backgroundColors, true);
+        cycle(backgroundColors, true);
         shiftColor(-1);
         moveLeft();
     });
 
     $('a.control_next').click(function () {
-        rotate(backgroundColors, false);
+        cycle(backgroundColors, false);
         shiftColor(1);
         moveRight();
     });
 
-    function rotate(arr, reverse) {
+    function cycle(arr, reverse) {
         if (reverse)
             arr.unshift(arr.pop())
         else
@@ -106,7 +106,7 @@ jQuery(document).ready(function ($) {
  */
 
 // complement
-function complement(color) {
+function getComplement(color) {
     let rgb = color.startsWith('#') ? hexToRgb(color) : color;
     let temprgb = rgb;
     let temphsv = RGB2HSV(temprgb);
