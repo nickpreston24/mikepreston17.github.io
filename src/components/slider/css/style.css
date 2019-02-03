@@ -1,0 +1,25 @@
+html,
+body {
+	font-family: Monda, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+:root {
+	--spacer-sm: .5rem;
+	--spacer-md: 1rem;
+	--spacer-lg: 2rem;
+}
+
+/* .container {
+    position: relative;
+    margin: auto;
+    width: 960px;
+} */
+
+#checkbox {
+	margin: 10, 10, 10, 10;
+}
+
+div.center {
+	display: flex;
+	align-items: center;
+}
