@@ -11,7 +11,8 @@ class Projects extends Component {
 			{ href: 'https://github.com/MikePreston17/liri-node-app/', name: 'LIRI Bot' },
 			{ href: 'https://github.com/MikePreston17/bamazon/', name: 'Bamazon' },
 			{ href: 'https://agile-woodland-60817.herokuapp.com/', name: 'Burger' },
-			{ href: 'https://desolate-falls-20937.herokuapp.com/', name: 'Friend Finder' },
+            { href: 'https://desolate-falls-20937.herokuapp.com/', name: 'Friend Finder' },
+            { href: 'https://git.heroku.com/ancient-scrubland-60372.git', name: 'soup-store'}
 		];
 
 		return (
