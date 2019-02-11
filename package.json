@@ -33,7 +33,7 @@
     "bugs": {
         "url": "https://github.com/MikePreston17/mikepreston17.github.io/issues"
     },
-    "homepage": "https://github.com/MikePreston17/mikepreston17.github.io/",
+    "homepage": "https://mikepreston17.github.io/",
     "dependencies": {
         "eslint-config-airbnb": "^17.1.0",
         "eslint-plugin-import": "^2.16.0",
