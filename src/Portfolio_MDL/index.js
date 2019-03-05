@@ -1,13 +1,11 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
+import { Layout, Header, Footer, FooterSection, FooterLinkList, Navigation, Drawer, Content } from 'react-mdl';
 import Landing from './landing';
 import About from './about';
 import Projects from './projects';
 import Resume from './resume';
 import Contact from './contact';
-import { Layout, Header, Footer, FooterSection, FooterLinkList, Navigation, Drawer, Content } from 'react-mdl';
-import { Link } from 'react-router-dom';
-
 
 const Portfolio = () => (
 
