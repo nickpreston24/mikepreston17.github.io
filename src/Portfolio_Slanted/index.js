@@ -38,8 +38,8 @@ const Portfolio = () => (
     <section className="hero">
         <h1>Creative Design <br></br> <span> PORTFOLIO</span></h1>
         <div className="button">
-            <a href="" className="btn1">Get Started</a>
-            <a href="" className="btn2">Get Featured</a>
+            <a href="" className="btn1">See Portfolio!</a>
+            <a href="" className="btn2">Connect on LinkedIn!</a>
         </div>
     </section>
     </div>
