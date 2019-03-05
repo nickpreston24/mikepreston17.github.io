@@ -1,17 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import 'react-mdl/extra/material.css';
-import 'react-mdl/extra/material';
-
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
-);
-
 var navButton = document.querySelector('.navigation-button');
 var navMenu = document.querySelector('.navigation-menu');
 var win = window;
@@ -35,4 +21,4 @@ function closeMenu(event) {
 navButton.addEventListener('click', openMenu, false);
 win.addEventListener('click', closeMenu, false);
 
-console.log('RUNNING');
+console.log('RUNNING')
