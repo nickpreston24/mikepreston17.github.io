@@ -1,49 +1,40 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
-import About from '../Portfolio_MDL/about';
-import Landing from '../Portfolio_MDL/landing';
-import Contact from '../Portfolio_MDL/contact';
-import Projects from '../Portfolio_MDL/projects';
+import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+// import About from '../Portfolio_MDL/about';
+// import Landing from '../Portfolio_MDL/landing';
+// import Contact from '../Portfolio_MDL/contact';
+// import Projects from '../Portfolio_MDL/projects';
+// import Resume from '../Portfolio_MDL/resume';
+// import { Layout, Header, Footer, FooterSection, FooterLinkList, Navigation, Drawer, Content } from 'react-mdl';
 
 const Portfolio = () => (
 
     <div className="container">
-    <div id="logo">MP</div>
+    {/* <div id="logo">MP</div> */}
     <div className="navigation-wrapper">
         <div className="navigation-button">
             <i className="fa fa-bars"></i>
         </div>
         <div className="navigation-menu">
-            <ul>               
-                {/* TODO: Refactor to use Links, someohow */}
-                {/* <Link to="/projects">GALLERY</Link> */}
-                <li><a href="https://mikepreston17.github.io/">HOME</a></li>
-                <li><a href="https://mikepreston17.github.io/projects">GALLERY</a></li>
-                <li><a href="https://mikepreston17.github.io/contact">CONTACT</a></li>
-                <li><a href="https://mikepreston17.github.io/aboutme">ABOUT</a></li>
-                {/* <li><a href="https://mikepreston17.github.io/">LOCATION</a></li>
-                <li><a href="https://mikepreston17.github.io/">TESTIMONIAL</a></li>
-                <li><a href="https://mikepreston17.github.io/">PRICING</a></li> */}
-            </ul>
+            <li><Link to="/">HOME</Link></li>
+            <li><Link to="/projects">GALLERY</Link>{' '}</li>
+            <li><Link to="/contact">CONTACT</Link>{' '}</li>
+            <li><Link to="/aboutme">ABOUT</Link>{' '}</li>
+            <li><Link to="/resume">RESUME</Link>{' '}</li>
         </div>
-        <Switch>
-            <Route exact path='/' component={Landing}/>
-            <Route path='/aboutme' component={About}/>
-            <Route path='/contact' component={Contact}/>
-            <Route path='/projects' component={Projects}/>
-        </Switch>
-
-    </div>            
-    
+    </div>                
     <section className="hero">
         <h1>Creative Design <br></br> <span> PORTFOLIO</span></h1>
         <div className="button">
-            <a href="" className="btn1">See Portfolio!</a>
-            <a href="" className="btn2">Connect on LinkedIn!</a>
+            {/* <a href="#" className="btn1">See Portfolio!</a> */}
+            <Link className="btn1" to="/projects">See Portfolio!</Link>
+            <a href="https://www.linkedin.com/in/michael-n-preston/" className="btn2">Connect on LI!</a>
         </div>
     </section>
     </div>
-
+    
 )
+
+
 
 export default Portfolio;

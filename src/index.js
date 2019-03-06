@@ -12,6 +12,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+
 var navButton = document.querySelector('.navigation-button');
 var navMenu = document.querySelector('.navigation-menu');
 var win = window;
