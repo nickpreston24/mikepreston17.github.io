@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+console.log('i am loaded')
 
 class Projects extends Component {
 	render() {
-		var links = [
+		var projects = [
             { href: 'https://mikepreston17.github.io/mem-berries/', name: 'Memberries' },
 			{ href: 'https://mikepreston17.github.io/GifTastic/', name: 'Gif-Tastic' },
 			{ href: 'https://github.com/MikePreston17/DynamicXml', name: 'XML To POCOs' },
@@ -17,10 +18,11 @@ class Projects extends Component {
 		];
 
 		return (
-			<ul>
-				{links.map(link => (
+            <ul>
+                <h2>Projects: </h2>
+				{projects.map(project => (
 					<li>
-						<a href={link.href}>{link.name}</a>
+						<a href={project.href}>{project.name}</a>
 					</li>
 				))}
 			</ul>

@@ -9,7 +9,7 @@ import Contact from './contact';
 
 const Portfolio = () => (
 
-    <Layout>
+    <Layout className="container">
         <Header title="Mike Preston's Portfolio!" scroll>
             <Navigation>
                 <Link to="/resume">Resume</Link>
