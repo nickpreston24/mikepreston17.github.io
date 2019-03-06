@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {BrowserRouter as Router, Redirect, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Switch, Route, Link } from 'react-router-dom';
 import SlantedNavbar from './navbars/Slanted'
 
 import About from './pages/about';
