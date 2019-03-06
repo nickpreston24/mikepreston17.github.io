@@ -19,7 +19,7 @@ class Projects extends Component {
 
 		return (
             <ul>
-                <h2>Projects: </h2>
+                <h2 style={h2Style}>Projects: </h2>
 				{projects.map(project => (
 					<li>
 						<a href={project.href}>{project.name}</a>
@@ -27,7 +27,10 @@ class Projects extends Component {
 				))}
 			</ul>
 		);
-	}
+    }    
+}
+const h2Style = {
+    color: "#fff"
 }
 
 export default Projects;

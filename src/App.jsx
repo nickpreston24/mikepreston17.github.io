@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Redirect, Switch, Route, Link } from 'react-router-dom';
-import Portfolio from './Portfolio_Slanted'
-// import Portfolio from './Portfolio_MDL'
-import About from './Portfolio_MDL/about';
-import Landing from './Portfolio_MDL/landing';
-import Contact from './Portfolio_MDL/contact';
-import Projects from './Portfolio_MDL/projects';
-import Resume from './Portfolio_MDL/resume';
+import SlantedNavbar from './navbars/Slanted'
+
+import About from './pages/about';
+import Landing from './pages/landing';
+import Contact from './pages/contact';
+import Projects from './pages/projects';
+import Resume from './pages/resume';
 
 class App extends Component {
 	render() {
         return (        
             <Router>
                 <div>
-                <Portfolio/>
+                <SlantedNavbar/>
                 <Switch>
                     <Route exact path='/' component={Landing}/>
                     <Route path='/aboutme' component={About}/>

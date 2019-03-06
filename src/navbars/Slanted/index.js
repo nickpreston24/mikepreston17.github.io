@@ -1,16 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-// import About from '../Portfolio_MDL/about';
-// import Landing from '../Portfolio_MDL/landing';
-// import Contact from '../Portfolio_MDL/contact';
-// import Projects from '../Portfolio_MDL/projects';
-// import Resume from '../Portfolio_MDL/resume';
-// import { Layout, Header, Footer, FooterSection, FooterLinkList, Navigation, Drawer, Content } from 'react-mdl';
+import { Link } from 'react-router-dom';
 
-const Portfolio = () => (
+const SlantedNavbar = () => (
 
     <div className="container">
-    {/* <div id="logo">MP</div> */}
+    <div id="logo">MICHAEL PRESTON</div>
     <div className="navigation-wrapper">
         <div className="navigation-button">
             <i className="fa fa-bars"></i>
@@ -35,6 +29,4 @@ const Portfolio = () => (
     
 )
 
-
-
-export default Portfolio;
+export default SlantedNavbar;
