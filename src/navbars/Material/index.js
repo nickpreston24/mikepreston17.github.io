@@ -1,13 +1,15 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Header, Footer, FooterSection, FooterLinkList, Navigation, Drawer, Content } from 'react-mdl';
-import Landing from './landing';
-import About from './about';
-import Projects from './projects';
-import Resume from './resume';
-import Contact from './contact';
 
-const Portfolio = () => (
+//TODO: Bundle these:
+import Landing from '../../pages/landing';
+import About from '../../pages/about'
+import Projects from '../../pages/projects';
+import Resume from '../../pages/resume';
+import Contact from '../../pages/contact';
+
+const MDLNavbar = () => (
 
     <Layout className="container">
         <Header title="Mike Preston's Portfolio!" scroll>
@@ -50,4 +52,4 @@ const Portfolio = () => (
 	
 );
 
-export default Portfolio;
+export default MDLNavbar;
