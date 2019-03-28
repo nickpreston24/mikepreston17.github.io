@@ -16,9 +16,9 @@ const SlantedNavbar = () => (
             <li><Link to="/aboutme">ABOUT</Link>{' '}</li>
             <li><Link to="/resume">RESUME</Link>{' '}</li>
         </div>
-    </div>                
+    </div>
     <section className="hero">
-        <h1>Creative Design <br></br> <span> PORTFOLIO</span></h1>
+        <h1>Full Stack Design <br></br> <span> PORTFOLIO</span></h1>
         <div className="button">
             {/* <a href="#" className="btn1">See Portfolio!</a> */}
             <Link className="btn1" to="/projects">See Portfolio!</Link>
@@ -26,7 +26,7 @@ const SlantedNavbar = () => (
         </div>
     </section>
     </div>
-    
+
 )
 
 export default SlantedNavbar;
