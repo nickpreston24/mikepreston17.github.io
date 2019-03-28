@@ -5,12 +5,17 @@ class Projects extends Component {
 	render() {
 		var projects = [
 
+            { href: 'https://kiyapp.herokuapp.com', name: 'Kiyapp', tech: ["React", "Firebase", "Express", "Node", "Mongo"], description: "Find your local sifu!  Kiyap connects you to prospective Martial Arts teachers!  No more guesswork or trial & error!"},
+
+            { href: 'https://modemsoperandi.herokuapp.com/', name: 'Modems Operandi', tech: [ "Python", "MySQL", "handlebars", "Passport js"], description: "Create a gaming PC on a budget!"},
+
+            { href: 'https://pacific-waters-30172.herokuapp.com/', name: 'Book Search', tech: ["React", "Express", "Node", "Mongo"], description: "Search and store your favorite books from Google!"},
+
             { href: 'https://mikepreston17.github.io/mem-berries/', name: 'Memberries', img: "organic-blueberries.jpg", tech: ["React"],
             description: "A berry-themed memory game.  Click on the berries only once and get a high score!"},
-            { href: 'https://sleepy-tundra-83479.herokuapp.com/', name: 'Modems Operandi', tech: [ "Python", "MySQL", "handlebars", "Passport js"], description: "Create a gaming PC on a budget!"},
+
             { href: 'https://mikepreston17.github.io/GifTastic/', name: 'Gif-Tastic', tech: ["html", "CSS", "jQuery", "giphy api"], description: "Search Gifs (...and cats)!" },
-            { href: 'https://github.com/MikePreston17/nyt-google-books', name: 'Book Search', tech: ["React", "Express", "Node", "Mongo"], description: "Search and store your favorite books from Google!"},
-            
+
 			// { href: 'https://github.com/MikePreston17/DynamicXml', name: 'XML To POCOs' },
 			// { href: 'https://github.com/MikePreston17/DesignPatterns', name: 'Design Patterns' },
 			// { href: 'https://mikepreston17.github.io/RPS-Multiplayer/', name: 'RPS-Multiplayer' },
@@ -35,7 +40,7 @@ class Projects extends Component {
 			</ul>
             </div>
 		);
-    }    
+    }
 }
 
 const h2Style = {
@@ -44,7 +49,7 @@ const h2Style = {
     // alignItems: 'center',
     // justifyContent: 'center',
     // align: 'center',
-    // float: 'center'    
+    // float: 'center'
 }
 // const url = './images/organic-blueberries.jpg'
 const DemoCard = (props) => (
