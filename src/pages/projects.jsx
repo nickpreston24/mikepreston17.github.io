@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
+// import { Button } from '@material-ui/core/Button';
 
 class Projects extends Component {
 	render() {
@@ -55,7 +56,7 @@ const h2Style = {
 const DemoCard = (props) => (
     <Card shadow={0} style={{width: '512px', margin: 'auto', zIndex: -2}}>
 
-    {console.log(props)}
+    {/* {console.log(props)} */}
         {
             props.img ?
                 <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://picsum.photos/640/360) center / cover' }}>{props.name}</CardTitle> :
@@ -71,7 +72,8 @@ const DemoCard = (props) => (
         }
 
         <CardActions border>
-            <Button href={props.link} colored>View it!</Button>
+            {/* {console.log('link: ', props.link)} */}
+            <Button className="mdl-button" href={props.link} target="_blank" colored>View it!</Button>
         </CardActions>
 
         <CardMenu style={{color: '#fff'}}>
