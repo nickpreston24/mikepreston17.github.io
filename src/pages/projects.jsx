@@ -1,43 +1,29 @@
 import React, { Component } from 'react';
 import { Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
 // import { Button } from '@material-ui/core/Button';
+// const http = require('http');
+import axios from 'axios';
+
 
 class Projects extends Component {
 
-    projects = [
+    projects = []
 
-        { href: 'https://kiyapp.herokuapp.com', name: 'Kiyapp', tech: ["React", "Firebase", "Express", "Node", "Mongo"], description: "Find your local sifu!  Kiyap connects you to prospective Martial Arts teachers!  No more guesswork or trial & error!"},
+    // TODO: Load the projects list from your html or the first running index.js, where possible for reduced ping-up time.
+    // Ping your projects
+    pingAll = (urls) => {
+        if(!urls || urls.length == 0)
+            return;
 
-        { href: 'https://modemsoperandi.herokuapp.com/', name: 'Modems Operandi', tech: [ "Python", "MySQL", "handlebars", "Passport js"], description: "Create a gaming PC on a budget!"},
-
-        { href: 'https://pacific-waters-30172.herokuapp.com/', name: 'Book Search', tech: ["React", "Express", "Node", "Mongo"], description: "Search and store your favorite books from Google!"},
-
-        { href: 'https://mikepreston17.github.io/mem-berries/', name: 'Memberries', img: "organic-blueberries.jpg", tech: ["React"],
-        description: "A berry-themed memory game.  Click on the berries only once and get a high score!"},
-
-        { href: 'https://mikepreston17.github.io/GifTastic/', name: 'Gif-Tastic', tech: ["html", "CSS", "jQuery", "giphy api"], description: "Search Gifs (...and cats)!" },
-
-        // { href: 'https://github.com/MikePreston17/DynamicXml', name: 'XML To POCOs' },
-        // { href: 'https://github.com/MikePreston17/DesignPatterns', name: 'Design Patterns' },
-        // { href: 'https://mikepreston17.github.io/RPS-Multiplayer/', name: 'RPS-Multiplayer' },
-        // { href: 'https://mikepreston17.github.io/LocoMoment/', name: 'Loco-Moment' },
-        // { href: 'https://github.com/MikePreston17/liri-node-app/', name: 'LIRI Bot' },
-        // { href: 'https://github.com/MikePreston17/bamazon/', name: 'Bamazon' },
-        // { href: 'https://agile-woodland-60817.herokuapp.com/', name: 'Burger' },
-        // { href: 'https://desolate-falls-20937.herokuapp.com/', name: 'Friend Finder' },
-        // { href: 'https://git.heroku.com/ancient-scrubland-60372.git', name: 'soup-store'}
-    ];
-
-
-    pingAll = () => {
-        //TODO: Ping your projects
-        // Load the projects list from your html or the first running index.js, where possible for reduced ping-up time.
-
+        // urls.forEach(url=>http.get(url).on('error', err=> console.error(err)));
+        urls.forEach(url=>axios.get(url).catch(console.error));
     }
 
     componentWillMount() {
         console.log('mounting...')
-        this.pingAll();
+        this.projects = require('./projects.json');
+
+        this.pingAll(this.projects.map(p=>p.url));
     }
 
 	render() {
