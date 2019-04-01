@@ -1,26 +1,26 @@
  [{
-         "href": "https://kiyapp.herokuapp.com",
+         "url": "https://kiyapp.herokuapp.com",
          "name": "Kiyapp",
          "tech": ["React", "Firebase", "Express", "Node", "Mongo"],
          "description": "Find your local sifu!  Kiyap connects you to prospective Martial Arts teachers!  No more guesswork or trial & error!"
      },
 
      {
-         "href": "https://modemsoperandi.herokuapp.com/",
+         "url": "https://modemsoperandi.herokuapp.com/",
          "name": "Modems Operandi",
          "tech": ["Python", "MySQL", "handlebars", "Passport js"],
          "description": "Create a gaming PC on a budget!"
      },
 
      {
-         "href": "https://pacific-waters-30172.herokuapp.com/",
-         "name": "Book Search",
+         "url": "https://epic-books.herokuapp.com/",
+         "name": "Epic Book Search",
          "tech": ["React", "Express", "Node", "Mongo"],
          "description": "Search and store your favorite books from Google!"
      },
 
      {
-         "href": "https://mikepreston17.github.io/mem-berries/",
+         "url": "https://mikepreston17.github.io/mem-berries/",
          "name": "Memberries",
          "img": "organic-blueberries.jpg",
          "tech": ["React"],
@@ -28,9 +28,30 @@
      },
 
      {
-         "href": "https://mikepreston17.github.io/GifTastic/",
+         "url": "https://mikepreston17.github.io/GifTastic/",
          "name": "Gif-Tastic",
          "tech": ["html", "CSS", "jQuery", "giphy api"],
          "description": "Search Gifs (...and cats)!"
+     },
+
+     {
+         "url": "https://soupstore.herokuapp.com",
+         "name": "The Soup Store",
+         "tech": ["html", "CSS", "handlebars"],
+         "description": "You can't buy clothes here."
+     },
+
+     {
+         "url": "https://burger-nom.herokuapp.com/",
+         "name": "Burger Nom",
+         "tech": ["handlebars js", "Express", "MySQL"],
+         "description": "Eat a cow"
+     },
+
+     {
+         "url": "https://find-me-mates.herokuapp.com/",
+         "name": "Find me mates",
+         "tech": ["Bootstrap 4", "MySQL"],
+         "description": "Find your new best friend!"
      }
  ]
