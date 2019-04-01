@@ -13,8 +13,8 @@
      },
 
      {
-         "url": "https://pacific-waters-30172.herokuapp.com/",
-         "name": "Book Search",
+         "url": "https://epic-books.herokuapp.com/",
+         "name": "Epic Book Search",
          "tech": ["React", "Express", "Node", "Mongo"],
          "description": "Search and store your favorite books from Google!"
      },
@@ -32,5 +32,18 @@
          "name": "Gif-Tastic",
          "tech": ["html", "CSS", "jQuery", "giphy api"],
          "description": "Search Gifs (...and cats)!"
+     },
+
+     {
+         "url" : "https://soupstore.herokuapp.com",
+         "name" : "The Soup Store",
+         "tech" : ["html", "CSS", "handlebars"],
+         "description": "You can't buy clothes here."
+     },
+
+     {
+         "url" : "https://burger-nom.herokuapp.com/",
+         "name" : "Burger Nom",
+         "tech" : ["handlebars js", "Express", "MySQL"]
      }
  ]
