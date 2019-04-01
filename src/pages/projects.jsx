@@ -15,8 +15,6 @@ class Projects extends Component {
         if(!urls || urls.length == 0)
             return;
 
-        // urls.forEach(url=>http.get(url).on('error', err=> console.error(err)));
-        // urls.forEach(url=>axios.get(url).catch(console.error));
         axios.all([
             urls.map(url=>axios.get(url))
         ])
