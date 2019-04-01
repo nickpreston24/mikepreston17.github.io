@@ -35,15 +35,23 @@
      },
 
      {
-         "url" : "https://soupstore.herokuapp.com",
-         "name" : "The Soup Store",
-         "tech" : ["html", "CSS", "handlebars"],
+         "url": "https://soupstore.herokuapp.com",
+         "name": "The Soup Store",
+         "tech": ["html", "CSS", "handlebars"],
          "description": "You can't buy clothes here."
      },
 
      {
-         "url" : "https://burger-nom.herokuapp.com/",
-         "name" : "Burger Nom",
-         "tech" : ["handlebars js", "Express", "MySQL"]
+         "url": "https://burger-nom.herokuapp.com/",
+         "name": "Burger Nom",
+         "tech": ["handlebars js", "Express", "MySQL"],
+         "description": "Eat a cow"
+     },
+
+     {
+         "url": "https://find-me-mates.herokuapp.com/",
+         "name": "Find me mates",
+         "tech": ["Bootstrap 4", "MySQL"],
+         "description": "Find your new best friend!"
      }
  ]
