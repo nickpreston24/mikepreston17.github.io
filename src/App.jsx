@@ -6,29 +6,36 @@ import SlantedNavbar from './navbars/Slanted'
 import About from './pages/about';
 import Landing from './pages/landing';
 import Contact from './pages/contact';
-import Projects from './pages/projects';
 import Resume from './pages/resume';
+import Gallery from './pages/projects';
 
 class App extends Component {
 	render() {
-        return (        
+        return (
             <Router>
                 <div>
                 <SlantedNavbar/>
                 <Switch>
                     <Route exact path='/' component={Landing}/>
+                    <Route path='/projects' component={Gallery}/>
                     <Route path='/aboutme' component={About}/>
+                    <Route path='/projects' component={Greeting}/>
                     <Route path='/contact' component={Contact}/>
-                    <Route path='/projects' component={Projects}/>
                     <Route path="/resume" component={Resume} />
                     <Route render={() => <h1>Page not found</h1>} />
-                    <Redirect to="/" />
+                    <Redirect to="/" /> */}
                 </Switch>
                 </div>
             </Router>
 		);
 	}
 }
-            
+
+
+function Greeting() {
+    return <div>Hi there!</div>;
+  }
+// const Hello = <div>Meow</div>
+
 
 export default App;

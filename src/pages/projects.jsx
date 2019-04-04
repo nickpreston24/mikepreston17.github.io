@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
-// import { Button } from '@material-ui/core/Button';
-// const http = require('http');
 import axios from 'axios';
+import ProjectCard from "../components/DemoCard";
+import Grid from '@material-ui/core/Grid';
 
-
-class Projects extends Component {
+export default class Gallery extends Component {
 
     projects = []
 
@@ -23,7 +21,7 @@ class Projects extends Component {
 
     componentWillMount() {
         console.log('mounting...')
-        this.projects = require('./projects.json');
+        this.projects = require('./data/projects.json');
 
         this.pingAll(this.projects.map(p=>p.url));
     }
@@ -32,56 +30,22 @@ class Projects extends Component {
 		return (
             <div style={{zIndex: -2}}>
             <ul>
-                <h2 style={h2Style}>Projects: </h2>
-				{this.projects.map(project => (
-                    <DemoCard img={"../images/" + project.img} description={project.description} key={project.name} name={project.name} link={project.href} />
+                <h2>Projects: </h2>
 
+                <Grid container spacing={16}>
+                {/* <div>Projects Grid</div> */}
+				{this.projects.map(project => (
+                    <ProjectCard
+                        img={"../images/" + project.img}
+                        description={project.description}
+                        link={project.href}
+                        key={project.name}
+                        name={project.name}
+                        />
 				))}
+                </Grid>
 			</ul>
             </div>
 		);
     }
 }
-
-const h2Style = {
-    color: "#fff",
-    // flexDirection: 'column',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // align: 'center',
-    // float: 'center'
-}
-// const url = './images/organic-blueberries.jpg'
-const DemoCard = (props) => (
-    <Card shadow={0} style={{width: '512px', margin: 'auto', zIndex: -2}}>
-
-    {/* {console.log(props)} */}
-        {
-            props.img ?
-                <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://picsum.photos/640/360) center / cover' }}>{props.name}</CardTitle> :
-                <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>{props.name}</CardTitle>
-        }
-        {
-            props.description ?
-            <CardText style={{color: '#f20c4a'}}>{props.description}</CardText>:
-            <CardText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Mauris sagittis pellentesque lacus eleifend lacinia...
-            </CardText>
-        }
-
-        <CardActions border>
-            {/* {console.log('link: ', props.link)} */}
-            <Button className="mdl-button" href={props.link} target="_blank" colored>View it!</Button>
-            {/* //<li><a href={project.href}>{project.name}</a></li> */}
-        </CardActions>
-
-        <CardMenu style={{color: '#fff'}}>
-            {/* <IconButton name="share" /> */}
-        </CardMenu>
-    </Card>
-)
-
-
-
-export default Projects;
