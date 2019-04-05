@@ -1,8 +1,8 @@
  [{
          "url": "https://kiyapp.herokuapp.com",
-         "name": "Kiyapp",
+         "name": "Kiy'app",
          "tech": ["React", "Firebase", "Express", "Node", "Mongo"],
-         "description": "Find your local sifu!  Kiyap connects you to prospective Martial Arts teachers!  No more guesswork or trial & error!"
+         "description": "Find your local sifu!  Kiy'app connects prospective students to Martial Arts teachers!  No more guesswork or trial & error!"
      },
 
      {

@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import ProjectCard from "../components/DemoCard";
 import Grid from '@material-ui/core/Grid';
+import { withStyles } from '@material-ui/core/styles';
 
-export default class Gallery extends Component {
+
+const styles = theme => ({
+    h2:{
+        color: '#fff'
+    }
+})
+
+export default withStyles(styles)(class Gallery extends Component {
 
     projects = []
 
@@ -38,7 +46,7 @@ export default class Gallery extends Component {
                     <ProjectCard
                         img={"../images/" + project.img}
                         description={project.description}
-                        link={project.href}
+                        link={project.url}
                         key={project.name}
                         name={project.name}
                         />
@@ -48,4 +56,4 @@ export default class Gallery extends Component {
             </div>
 		);
     }
-}
+})
