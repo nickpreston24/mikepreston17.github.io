@@ -20,5 +20,3 @@ function closeMenu(event) {
 
 navButton.addEventListener('click', openMenu, false);
 win.addEventListener('click', closeMenu, false);
-
-console.log('RUNNING')
