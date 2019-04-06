@@ -4,9 +4,8 @@ import ProjectCard from "../components/DemoCard";
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
-
 const styles = theme => ({
-    h2:{
+    header2:{
         color: '#fff'
     }
 })
@@ -28,20 +27,21 @@ export default withStyles(styles)(class Gallery extends Component {
     }
 
     componentWillMount() {
-        console.log('mounting...')
+
         this.projects = require('./data/projects.json');
 
         this.pingAll(this.projects.map(p=>p.url));
     }
 
 	render() {
-		return (
-            <div style={{zIndex: -2}}>
-            <ul>
-                <h2>Projects: </h2>
 
+        const {classes} = this.props;
+
+		return (
+            <div className='container' style={{zIndex: -2}}>
+            <ul>
+                <h2 className={classes.header2}>Projects: </h2>
                 <Grid container spacing={16}>
-                {/* <div>Projects Grid</div> */}
 				{this.projects.map(project => (
                     <ProjectCard
                         img={"../images/" + project.img}

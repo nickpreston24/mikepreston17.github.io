@@ -41,46 +41,44 @@ const styles = theme => ({
       color: blue,
       "max-width": "700px"
     },
-    root: {
-      flexGrow: 1
-    },
-    flex: {
-      flexGrow: 1
-    },
-    menuButton: {
-      marginLeft: -12,
-      marginRight: 20
-    },
-    actions: {
-      display: "flex"
-    },
-    expand: {
-      transform: "rotate(0deg)",
-      transition: theme.transitions.create("transform", {
-        duration: theme.transitions.duration.shortest
-      }),
-      marginLeft: "auto",
-      [theme.breakpoints.up("sm")]: {
-        marginRight: -8
-      }
-    },
-    expandOpen: {
-      transform: "rotate(180deg)"
-    },
-    avatar: {
-      backgroundColor: blue[500]
-    },
-    anchorNoStyle: {
-      "text-decoration": "inherit",
-      color: "inherit"
-    }
+    // root: {
+    //   flexGrow: 1
+    // },
+    // flex: {
+    //   flexGrow: 1
+    // },
+    // menuButton: {
+    //   marginLeft: -12,
+    //   marginRight: 20
+    // },
+    // actions: {
+    //   display: "flex"
+    // },
+    // expand: {
+    //   transform: "rotate(0deg)",
+    //   transition: theme.transitions.create("transform", {
+    //     duration: theme.transitions.duration.shortest
+    //   }),
+    //   marginLeft: "auto",
+    //   [theme.breakpoints.up("sm")]: {
+    //     marginRight: -8
+    //   }
+    // },
+    // expandOpen: {
+    //   transform: "rotate(180deg)"
+    // },
+    // avatar: {
+    //   backgroundColor: blue[500]
+    // },
+    // anchorNoStyle: {
+    //   "text-decoration": "inherit",
+    //   color: "inherit"
+    // }
   });
 
 const ProjectCard = (props) => {
-    console.log(props);
     const {classes} = props;
     const {name, img, description, link} = props;
-    console.log('url:', link);
 
     return (
         <Grid
