@@ -10,11 +10,11 @@ const SlantedNavbar = () => (
             <i className="fa fa-bars"></i>
         </div>
         <div className="navigation-menu">
-            <li><Link to="/">HOME</Link></li>
-            <li><Link to="/projects">GALLERY</Link>{' '}</li>
-            <li><Link to="/contact">CONTACT</Link>{' '}</li>
-            <li><Link to="/aboutme">ABOUT</Link>{' '}</li>
-            <li><Link to="/resume">RESUME</Link>{' '}</li>
+            <Link to="/">HOME</Link>
+            <Link to="/projects">GALLERY</Link>{' '}
+            <Link to="/contact">CONTACT</Link>{' '}
+            <Link to="/aboutme">ABOUT</Link>{' '}
+            <Link to="/resume">RESUME</Link>{' '}
         </div>
     </div>
     <section className="hero">
