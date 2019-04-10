@@ -2,15 +2,32 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
+import axios from 'axios';
 
+var projects = projects = require('./data/projects.json');
+
+/** Project Pinging */
+function pingAll (urls) {
+    if(!urls || urls.length == 0)
+        return;
+
+    axios.all([
+        urls.map(url=>axios.get(url))
+    ])
+    .catch(console.error)
+}
+
+pingAll(projects.map(p=>p.url));
+
+/** Main Render */
 ReactDOM.render(
   <Router>
-    <App />
+    <App projects={projects} />
   </Router>,
   document.getElementById('root')
 );
 
-
+/**  Slider Animations */
 var navButton = document.querySelector('.navigation-button');
 var navMenu = document.querySelector('.navigation-menu');
 var win = window;

@@ -10,22 +10,27 @@ import Resume from './pages/resume';
 import Gallery from './pages/projects';
 
 class App extends Component {
-	render() {
+
+    render() {
+
         return (
-            <Router>
-                <div>
+            <div>
+                <Router>
                     <SlantedNavbar/>
                     <Switch>
                         <Route exact path='/' component={Landing}/>
-                        <Route path='/projects' component={Gallery}/>
+                        <Route
+                            path='/projects'
+                            component={props => <Gallery {...this.props} />}
+                        />
                         <Route path='/aboutme' component={About}/>
                         <Route path='/contact' component={Contact}/>
                         <Route path="/resume" component={Resume} />
                         <Route render={() => <h1>Page not found</h1>} />
                         <Redirect to="/" />
                     </Switch>
-                </div>
-            </Router>
+                </Router>
+            </div>
 		);
 	}
 }

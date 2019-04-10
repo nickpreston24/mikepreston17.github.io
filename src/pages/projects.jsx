@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import ProjectCard from "../components/DemoCard";
+import ProjectCard from "../components/ProjectCard";
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -14,23 +13,8 @@ export default withStyles(styles)(class Gallery extends Component {
 
     projects = []
 
-    // TODO: Load the projects list from your html or the first running index.js, where possible for reduced ping-up time.
-    // Ping your projects
-    pingAll = (urls) => {
-        if(!urls || urls.length == 0)
-            return;
-
-        axios.all([
-            urls.map(url=>axios.get(url))
-        ])
-        .catch(console.error)
-    }
-
     componentWillMount() {
-
-        this.projects = require('./data/projects.json');
-
-        this.pingAll(this.projects.map(p=>p.url));
+        this.projects = this.props.projects;
     }
 
 	render() {
@@ -50,7 +34,8 @@ export default withStyles(styles)(class Gallery extends Component {
                         key={project.name}
                         name={project.name}
                         />
-				))}
+				))
+                }
                 </Grid>
 			</ul>
             </div>
