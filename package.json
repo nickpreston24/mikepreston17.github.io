@@ -12,7 +12,8 @@
         "lint": "eslint .",
         "lintfix": "eslint . --fix",
         "predeploy": "yarn run build",
-        "deploy": "gh-pages -b master -d build"
+        "deploy": "gh-pages -b master -d build",
+        "merge-deploy": "git checkout master"
     },
     "eslintConfig": {
         "extends": "react-app"
