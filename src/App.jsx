@@ -14,28 +14,20 @@ class App extends Component {
         return (
             <Router>
                 <div>
-                <SlantedNavbar/>
-                <Switch>
-                    <Route exact path='/' component={Landing}/>
-                    <Route path='/projects' component={Gallery}/>
-                    <Route path='/aboutme' component={About}/>
-                    <Route path='/projects' component={Greeting}/>
-                    <Route path='/contact' component={Contact}/>
-                    <Route path="/resume" component={Resume} />
-                    <Route render={() => <h1>Page not found</h1>} />
-                    <Redirect to="/" /> */}
-                </Switch>
+                    <SlantedNavbar/>
+                    <Switch>
+                        <Route exact path='/' component={Landing}/>
+                        <Route path='/projects' component={Gallery}/>
+                        <Route path='/aboutme' component={About}/>
+                        <Route path='/contact' component={Contact}/>
+                        <Route path="/resume" component={Resume} />
+                        <Route render={() => <h1>Page not found</h1>} />
+                        <Redirect to="/" />
+                    </Switch>
                 </div>
             </Router>
 		);
 	}
 }
-
-
-function Greeting() {
-    return <div>Hi there!</div>;
-  }
-// const Hello = <div>Meow</div>
-
 
 export default App;
