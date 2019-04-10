@@ -30,10 +30,10 @@ const SlantedNavbar = () => (
                 <ListItem component={Link} to="/projects" button>GALLERY</ListItem>
                 <ListItem component={Link} to="/contact" button>CONTACT ME</ListItem> */}
 
+                {/* <ListItem component={Link} to="/contact" button>CONTACT</ListItem>
                 <ListItem component={Link} to="/contact" button>CONTACT</ListItem>
                 <ListItem component={Link} to="/contact" button>CONTACT</ListItem>
-                <ListItem component={Link} to="/contact" button>CONTACT</ListItem>
-                <ListItem component={Link} to="/contact" button>CONTACT</ListItem>
+                <ListItem component={Link} to="/contact" button>CONTACT</ListItem> */}
 
             </ul>
 
