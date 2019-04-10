@@ -40,6 +40,7 @@ const SlantedNavbar = () => (
         </div>
     </div>
     <section className="hero">
+        {/* <h1>Creative Design <br></br> <span> PORTFOLIO</span></h1> */}
         <h1>Full Stack Design <br></br> <span> PORTFOLIO</span></h1>
         <div className="button">
             {/* <a href="#" className="btn1">See Portfolio!</a> */}
