@@ -13,7 +13,7 @@
         "lintfix": "eslint . --fix",
         "predeploy": "yarn run build",
         "deploy": "gh-pages -b master -d build",
-        "merge-deploy": "git checkout master"
+        "merge-deploy": "git checkout master && git merge source && git checkout source"
     },
     "eslintConfig": {
         "extends": "react-app"
