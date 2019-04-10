@@ -38,7 +38,7 @@ export default withStyles(styles)(class Gallery extends Component {
         const {classes} = this.props;
 
 		return (
-            <div className='container' style={{zIndex: -2}}>
+            <div className='container' style={{zIndex: 2}}>
             <ul>
                 <h2 className={classes.header2}>Projects: </h2>
                 <Grid container spacing={16}>
