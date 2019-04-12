@@ -1,0 +1,50 @@
+{
+    "sections": [
+        {
+            "section": "summary",
+            "parts": [
+                {
+                    "tag": "h1",
+                    "text": "Summary"
+                },
+                {
+                    "tag": "p",
+                    "text": "A quick and constant learner with a background in Computer Science and software development, an attention to detail, who currently has his sights set on a full-time web development position.  Effective in maintaining product quality and functionality, enhancing data integrity, utilizing best practices to craft unique and powerful software.  Known for adaptability, energy, and collaboration during all stages of development."
+                },
+                {
+                    "parts": [
+                        {
+                            "tag": "strong",
+                            "text": "Technical Skills:"
+                        },
+                        {
+                            "tag": "p",
+                            "text": "React, Node JS, Material UI, Bootstrap, Express, Mongo DB, C#/Java, MySQL, Design Patterns, Project Management, Agile, Object Oriented Programming"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section": "summary",
+            "parts": [
+                {
+                    "tag": "h1",
+                    "text": "Education"
+                },
+                {
+                    "tag": "strong",
+                    "text": "Southern Methodist University, Dallas, Texas"
+                },
+                {
+                    "tag": "i",
+                    "text": "Full Stack Web Development Bootcamp - Graduated March 2019"
+                },
+                {
+                    "tag": "p",
+                    "text": "An intensive 24-week long boot camp dedicated to designing and building web applications. Learned skills include HTML5, CSS3, Javascript, ES6, jQuery, Material UI, Bootstrap, Firebase, Node JS, MySQL, MongoDB, Express, Handlebars JS, Java, and React JS"
+                }
+            ]
+        }
+    ]
+}
