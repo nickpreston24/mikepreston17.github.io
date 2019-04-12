@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import axios from 'axios';
 
-var projects = projects = require('./data/projects.json');
+var projects = require('./data/projects.json');
 
 /** Project Pinging */
 function pingAll (urls) {
