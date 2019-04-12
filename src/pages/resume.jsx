@@ -35,6 +35,8 @@ class Resume extends Component {
 
     componentWillMount() {
         const myResume = require('../data/resume.json');
+
+        // FIXME: Commented this out as it's not yet ready for Production.
         // this.resume = myResume;
         // console.log('my resume: ', this.resume);
     }
