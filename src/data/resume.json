@@ -45,6 +45,40 @@
                     "text": "An intensive 24-week long boot camp dedicated to designing and building web applications. Learned skills include HTML5, CSS3, Javascript, ES6, jQuery, Material UI, Bootstrap, Firebase, Node JS, MySQL, MongoDB, Express, Handlebars JS, Java, and React JS"
                 }
             ]
+        },
+        {
+            "section": "creations",
+            "parts": [
+                {
+                    "tag": "h1",
+                    "text": "Recent Creations"
+                },
+                {
+                    "tag": "strong",
+                    "text": "Kiy'app"
+                },
+                {
+                    "tag": "ul",
+                    "parts": [
+                        {
+                            "tag": "li",
+                            "text": "Connects prospective martial arts students to schools and personal trainers by the types of training they seek for a smoother experience in choosing a discipline and ranking up, using a relational database schema and role-based authentication"
+                        },
+                        {
+                            "tag": "li",
+                            "text": "Employs a full MERN stack with, Mobx, Firebase, and MySQL"
+                        },
+                        {
+                            "tag": "a",
+                            "text": "Live site",
+                            "props": {
+                                "target": "_blank",
+                                "href": "https://kiyapp.herokuapp.com/"
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
