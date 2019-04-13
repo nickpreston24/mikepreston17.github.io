@@ -7,7 +7,6 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Typography from "@material-ui/core/Typography";
-import blue from "@material-ui/core/colors/blue";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 
@@ -25,21 +24,23 @@ const styles = theme => ({
       backgroundColor: "#0079c1"
     },
     card: {
-      color: blue,
+      color: 'blue',
       "max-width": "700px"
     },
   });
 
 const ProjectCard = (props) => {
+
     const {classes} = props;
     const {name, img, description, link} = props;
+    const {grid, actions, card, toolbar} = classes;
 
     return (
         <Grid
             item xs={10}
-            className={classes.grid}
+            className={grid}
             >
-            <Card className={classes.card}>
+            <Card className={card}>
                 <CardHeader
                     title={name}
                     // subheader="test sub"
@@ -49,15 +50,15 @@ const ProjectCard = (props) => {
                         {description}
                     </Typography>
                 </CardContent>
-                <CardActions className={classes.actions} disableActionSpacing>
-                        <Button
-                            variant="contained"
-                            size="small"
-                            href={link}
-                            className={classes.toolbar}
-                        >
-                            Play
-                        </Button>
+                <CardActions className={actions} disableActionSpacing>
+                    <Button
+                        variant="contained"
+                        size="small"
+                        href={link}
+                        className={toolbar}
+                    >
+                        Play
+                    </Button>
                 </CardActions>
 
             </Card>
