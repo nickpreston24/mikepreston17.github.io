@@ -34,8 +34,7 @@ export default withStyles(styles)(class Gallery extends Component {
                         key={project.name}
                         name={project.name}
                         />
-				))
-                }
+				))}
                 </Grid>
 			</ul>
             </div>
