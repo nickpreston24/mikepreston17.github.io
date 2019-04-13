@@ -21,7 +21,7 @@ class App extends Component {
                         <Route exact path='/' component={Landing}/>
                         <Route
                             path='/projects'
-                            component={props => <Gallery {...this.props} />}
+                            component={_ => <Gallery {...this.props} />}
                         />
                         <Route path='/aboutme' component={About}/>
                         <Route path='/contact' component={Contact}/>
