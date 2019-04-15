@@ -39,9 +39,9 @@ const Contact = (props) => {
                 <ListItem>Email: michael.n.preston@gmail.com</ListItem>
                 <ListItem><a href="https://www.linkedin.com/in/michael-n-preston/">LinkedIn</a></ListItem>
 
-
             </div>
         </div>
-)};
+    )
+};
 
 export default withStyles(styles)(Contact);
