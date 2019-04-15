@@ -1,39 +1,48 @@
 import React from 'react';
 import { withStyles } from "@material-ui/core/styles";
-import {Link} from 'react-router-dom';
 import PropTypes from "prop-types";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import CardMedia from '@material-ui/core/CardMedia';
+
+// import {Link} from 'react-router-dom';
+// import Typography from "@material-ui/core/Typography";
+// import CardTitle from '@material-ui/core/CardTitle';
 
 const styles = theme => ({
     grid: {
-      padding: theme.spacing.unit * 100,
-      margin: "auto",
-      position: "relative",
-      top: "25 %",
-      width: "50 %",
-      height: "50 %"
+        padding: theme.spacing.unit * 100,
+        margin: "auto",
+        position: "relative",
+        top: "25 %",
+        width: "50 %",
+        height: "50 %"
     },
     toolbar: {
-      color: "white",
-      backgroundColor: "#0079c1"
+        color: "white",
+        backgroundColor: "#0079c1"
     },
     card: {
-      color: 'blue',
-      "max-width": "700px"
+        color: 'blue',
+        "max-width": "700px"
+    },
+    media: {
+        height: 0,
+        paddingTop: '56.25%', // 16:9
     },
   });
 
 const ProjectCard = (props) => {
 
     const {classes} = props;
-    const {name, img, description, link} = props;
     const {grid, actions, card, toolbar} = classes;
+    const {name, img, description, url} = props;
+
+    console.log('img: ', img || "", 'name', name, 'desc:', description, 'url:', url);
 
     return (
         <Grid
@@ -43,18 +52,22 @@ const ProjectCard = (props) => {
             <Card className={card}>
                 <CardHeader
                     title={name}
-                    // subheader="test sub"
+                    subheader={description}
                     />
+                <CardMedia
+                    title={name}
+                    image={"public/images/Me.jpg" || 'noimage'}
+                />
                 <CardContent>
-                    <Typography component="p">
+                    {/* <Typography component="p">
                         {description}
-                    </Typography>
+                    </Typography> */}
                 </CardContent>
                 <CardActions className={actions} disableActionSpacing>
                     <Button
                         variant="contained"
                         size="small"
-                        href={link}
+                        href={url}
                         className={toolbar}
                     >
                         Play
