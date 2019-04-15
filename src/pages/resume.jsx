@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Section from './Custom';
-
+import Section from '../experimental/Section';
 
 //IDEA: A rotating cube would be fun here
 // Icons clicked allow user to rotate between Education, Summary, Recent Projects, etc.
@@ -54,7 +53,7 @@ class Resume extends Component {
 const DynamicResume = props => {
 
     const {sections} = props.resume;
-    const { header1, experience, paragraph, creations, panel } = props.classes;
+    // const { header1, experience, paragraph, creations, panel } = props.classes;
 
     // console.log('sections:', sections)
     // console.log('props: ', props)
@@ -108,8 +107,8 @@ const StaticResume = (props) => {
                     <ul className={creations}>
                         <li>Connects prospective martial arts students to schools and personal trainers by the types of training they seek for a smoother experience in choosing a discipline and ranking up, using a relational database schema and role-based authentication</li>
                         <li>Employs a full MERN stack with, Mobx, Firebase, and MySQL</li>
-                        <a target="_blank" href="https://kiyapp.herokuapp.com/">Live site </a>
-                            and <a target="_blank" href="https://github.com/mikepreston17/kiyap">Code</a>
+                        <a href="https://kiyapp.herokuapp.com/">Live site </a>
+                            and <a href="https://github.com/mikepreston17/kiyap">Code</a>
                     </ul>
 
                     <p className={paragraph}><strong>Modems Operandi</strong></p>
@@ -119,8 +118,8 @@ const StaticResume = (props) => {
                         <li>Led the Modems Operandi team to complete a minimum viable product in a two-week Agile sprint, using a kanban board, Git Bash, MySQL and web scraping, with deployment</li>
                         <li>Powered by the handlebars templating engine, jQuery, Passport JS and MySQL, with web scraper built in Python</li>
                         <li>
-                            <a target="_blank" href="https://modemsoperandi.herokuapp.com/">Live site </a>
-                             and <a target="_blank" href="https://github.com/ScottW1731/ModemsOperandi">Code</a>
+                            <a href="https://modemsoperandi.herokuapp.com/">Live site </a>
+                             and <a href="https://github.com/ScottW1731/ModemsOperandi">Code</a>
                         </li>
                     </ul>
 
