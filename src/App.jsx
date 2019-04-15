@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Redirect, Switch, Route } from 'react-router-d
 import SlantedNavbar from './navbars/Slanted'
 
 import About from './pages/about';
-import Landing from './pages/landing';
+import Landing from './pages/Landing';
 import Contact from './pages/contact';
-import Resume from './pages/resume';
-import Gallery from './pages/projects';
+import Resume from './pages/Resume';
+import Gallery from './pages/Resume/projects';
 
 class App extends Component {
     render() {

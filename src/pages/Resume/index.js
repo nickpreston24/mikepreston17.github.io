@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Section from '../experimental/Section';
+import Section from '../../experimental/Section';
 
 //IDEA: A rotating cube would be fun here
 // Icons clicked allow user to rotate between Education, Summary, Recent Projects, etc.
@@ -33,7 +33,7 @@ class Resume extends Component {
     resume = {};
 
     componentWillMount() {
-        const myResume = require('../data/resume.json');
+        const myResume = require('../../data/resume.json');
 
         // FIXME: Commented this out as it's not yet ready for Production.
         // this.resume = myResume;
