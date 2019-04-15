@@ -12,6 +12,12 @@ body {
     position: relative;
     top: 40px;
     margin: 0 auto;
+
+    /**FIXME: The following is temporary to allow all content to display
+        TODO: Make it so content slides to left away from the navbar when it is opened.
+        (See Kiyap transitions)
+    */
+    float: left;
 }
 
 span {
