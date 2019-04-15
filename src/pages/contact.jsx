@@ -35,9 +35,9 @@ const Contact = (props) => {
                 <Typography variant="p" align="center">Mobile: (817) 565-2372</Typography>
                 <Typography variant="p" align="center">Email: michael.n.preston@gmail.com</Typography> */}
 
-                <ListItem>LinkedIn: https://www.linkedin.com/in/michael-n-preston/</ListItem>
                 <ListItem>Mobile: (817) 565-2372</ListItem>
                 <ListItem>Email: michael.n.preston@gmail.com</ListItem>
+                <ListItem><a href="https://www.linkedin.com/in/michael-n-preston/">LinkedIn</a></ListItem>
 
 
             </div>
