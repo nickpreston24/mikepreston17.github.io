@@ -7,17 +7,17 @@ import { compose } from 'recompose';
 import { Exception } from 'handlebars';
 
 const styles = theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
-  },
-  gridList: {
-    width: 500,
-    height: 450,
-  },
+    root: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        backgroundColor: theme.palette.background.paper,
+    },
+    gridList: {
+        width: 500,
+        height: 450,
+    },
 });
 
 // const asGridList = (items = []) => Component => {
@@ -33,21 +33,21 @@ const styles = theme => ({
 
 // My awesome HOC:
 // TODO: Needs testing!
-export const asGridList = (items = [], props) => Component=> {
+export const asGridList = (items = [], props) => Component => {
     const { classes } = props;
 
     return (
-      <div className={classes.root}>
-        <GridList cellHeight={160} className={classes.gridList} cols={3}>
-          {items.map((item, index) => (
-            <GridListTile key={index} cols={item.cols || 1}>
-              <Component key={index} {...props}/>
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
+        <div className={classes.root}>
+            <GridList cellHeight={160} className={classes.gridList} cols={3}>
+                {items.map((item, index) => (
+                    <GridListTile key={index} cols={item.cols || 1}>
+                        <Component key={index} {...props} />
+                    </GridListTile>
+                ))}
+            </GridList>
+        </div>
     );
-  }
+}
 
 // export function ItemList(items = [], props) {
 //     const { classes } = props;
@@ -70,15 +70,15 @@ function ImageGridList(tiles = [], props) {
     const { classes } = props;
 
     return (
-      <div className={classes.root}>
-        <GridList cellHeight={160} className={classes.gridList} cols={3}>
-          {tiles.map(tile => (
-            <GridListTile key={tile.img} cols={tile.cols || 1}>
-              <img src={tile.img} alt={tile.title} />
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
+        <div className={classes.root}>
+            <GridList cellHeight={160} className={classes.gridList} cols={3}>
+                {tiles.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 1}>
+                        <img src={tile.img} alt={tile.title} />
+                    </GridListTile>
+                ))}
+            </GridList>
+        </div>
     );
 }
 

@@ -14,23 +14,23 @@ class App extends Component {
         return (
             <>
                 <Router>
-                    <SlantedNavbar/>
+                    <SlantedNavbar />
                     <Switch>
-                        <Route exact path='/' component={Landing}/>
+                        <Route exact path='/' component={Landing} />
                         <Route
                             path='/projects'
                             component={_ => <Gallery {...this.props} />}
                         />
-                        <Route path='/aboutme' component={About}/>
-                        <Route path='/contact' component={Contact}/>
+                        <Route path='/aboutme' component={About} />
+                        <Route path='/contact' component={Contact} />
                         <Route path="/resume" component={Resume} />
                         <Route render={() => <h1>Page not found</h1>} />
                         <Redirect to="/" />
                     </Switch>
                 </Router>
             </>
-		);
-	}
+        );
+    }
 }
 
 export default App;

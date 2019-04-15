@@ -12,42 +12,42 @@ import { Jumbotron } from 'reactstrap';
 
 const styles = theme => ({
     grid: {
-    //   padding: theme.spacing.unit * 2,
-      margin: "auto",
-      position: "relative",
-      top: "25 %",
-      width: "50 %",
-      height: "50 %"
+        //   padding: theme.spacing.unit * 2,
+        margin: "auto",
+        position: "relative",
+        top: "25 %",
+        width: "50 %",
+        height: "50 %"
     },
     toolbar: {
-      color: "white",
-      backgroundColor: "#0079c1"
+        color: "white",
+        backgroundColor: "#0079c1"
     },
     card: {
         "max-width": "700px",
         "max-height": "300px",
-        "height" : "320px"
+        "height": "320px"
         //   margin: '40px'
 
     },
-    headers:{
-        h1 : {
-            backgroundColor : 'white',
+    headers: {
+        h1: {
+            backgroundColor: 'white',
             color: 'black',
         },
-        h2 : {
-            backgroundColor : 'teal',
+        h2: {
+            backgroundColor: 'teal',
             color: '#bada55',
             className: 'display-3'
         },
         "max-width": "700px",
     }
-  });
+});
 
-const About = (props)=> {
+const About = (props) => {
 
-    const {classes}  = props;
-    const {grid, card, headers} = classes;
+    const { classes } = props;
+    const { grid, card, headers } = classes;
 
     return (
         <div className="container">
@@ -61,11 +61,11 @@ const About = (props)=> {
             <Grid
                 item xs={14}
                 className={grid}
-                >
+            >
                 <GridList>
                     <GridListTile cols={1}>
                         <Card className={card}>
-                            <CardHeader title="Organic Cooking"/>
+                            <CardHeader title="Organic Cooking" />
                             <CardContent>
                                 <Typography className={card} component="p">
                                     I learn (self-taught) to cook, whipping up recipes from my imagination and writing the successful (i.e. not burnt) ones down.  My only rule is that all ingredients must be Organic - it all tastes so much better!
@@ -79,14 +79,14 @@ const About = (props)=> {
                     </GridListTile>
                     <GridListTile cols={1}>
                         <Card className={card}>
-                            <CardHeader title="Martial Arts"/>
+                            <CardHeader title="Martial Arts" />
                             <CardContent>
                                 <Typography component="p">
-                                My interest in martial arts stemmed from seeing others perform when I was a kid - I'd always wanted to be able to Karate chop a block in half.  So far, I've managed to do a decent job on boards but concrete HURTS!
+                                    My interest in martial arts stemmed from seeing others perform when I was a kid - I'd always wanted to be able to Karate chop a block in half.  So far, I've managed to do a decent job on boards but concrete HURTS!
 
-                                I've done quite a bit in my first 20 or so years.  In college I joined the Texas Blackbelt Academy's Taekwondo class and the Fencing Club.  Training to parry, riposte and jab enhanced my tone and wits while kicking shields improved my flexibility.
+                                    I've done quite a bit in my first 20 or so years.  In college I joined the Texas Blackbelt Academy's Taekwondo class and the Fencing Club.  Training to parry, riposte and jab enhanced my tone and wits while kicking shields improved my flexibility.
 
-                                In additon to my belts in Taekwondo, in 2019 I achieved an orange belt in Krav Maga.
+                                    In additon to my belts in Taekwondo, in 2019 I achieved an orange belt in Krav Maga.
 
                                 </Typography>
                             </CardContent>
