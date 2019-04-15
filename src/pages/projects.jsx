@@ -9,12 +9,18 @@ const styles = theme => ({
     }
 })
 
+// const path = __dirname + '/images';
+// console.log('path:', path)
+
+// const images = require('./images');
+// console.log('images: ', images);
+
 export default withStyles(styles)(class Gallery extends Component {
 
     projects = []
 
     componentWillMount() {
-        this.projects = this.props.projects;
+        this.projects = this.props.projects || [];
     }
 
 	render() {
@@ -26,13 +32,10 @@ export default withStyles(styles)(class Gallery extends Component {
             <ul>
                 <h2 className={classes.header2}>Projects: </h2>
                 <Grid container spacing={16}>
-				{this.projects.map(project => (
+				{this.projects.map((project, index) => (
                     <ProjectCard
-                        img={"../images/" + project.img}
-                        description={project.description}
-                        link={project.url}
-                        key={project.name}
-                        name={project.name}
+                        key={index}
+                        {...project}
                         />
 				))}
                 </Grid>

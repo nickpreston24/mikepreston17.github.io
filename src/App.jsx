@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Redirect, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Switch, Route } from 'react-router-dom';
 import SlantedNavbar from './navbars/Slanted'
 
 import About from './pages/about';
@@ -10,11 +10,9 @@ import Resume from './pages/resume';
 import Gallery from './pages/projects';
 
 class App extends Component {
-
     render() {
-
         return (
-            <div>
+            <>
                 <Router>
                     <SlantedNavbar/>
                     <Switch>
@@ -30,7 +28,7 @@ class App extends Component {
                         <Redirect to="/" />
                     </Switch>
                 </Router>
-            </div>
+            </>
 		);
 	}
 }

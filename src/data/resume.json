@@ -72,7 +72,6 @@
                             "tag": "a",
                             "text": "Live site",
                             "props": {
-                                "target": "_blank",
                                 "href": "https://kiyapp.herokuapp.com/"
                             }
                         }
