@@ -32,12 +32,12 @@ const styles = theme => ({
     },
     card: {
         color: 'blue',
-        // backgroundColor: 'cyan',
         "max-width": "90%"
     },
     media: {
         height: 0,
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '90%',
+        margin: "10px",
     },
     playButton: {
         color: 'white',
@@ -65,7 +65,6 @@ const Project = (props) => {
     const { name, img, description, liveLink, tech } = props;
 
     img && console.log('img: ', img);
-    // console.log('tech:', tech)
 
     return (
         <Grid
@@ -77,11 +76,11 @@ const Project = (props) => {
                     title={name}
                     subheader={description}
                 />
-                <CardMedia
+                {img && <CardMedia
                     title={name}
                     className={media}
                     image={img || 'noimage'}
-                />
+                />}
                 <CardContent>
                     {
                         tech &&
@@ -117,7 +116,6 @@ const Project = (props) => {
                         </Button>
                     </Tooltip>
                 </CardActions>
-
             </Card>
         </Grid>
     )
