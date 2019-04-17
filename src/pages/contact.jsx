@@ -1,7 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
-// import Typography from "@material-ui/core/Typography";
+import Icon from '@material-ui/core/Icon';
 import ListItem from '@material-ui/core/ListItem';
+import Button from "@material-ui/core/Button";
 
 const styles = theme => ({
     header: {
@@ -18,27 +19,29 @@ const styles = theme => ({
 
     panel: {
         background: "#fff"
+    },
+    button: {
+        border: '1px solid blue',
+        color: 'red'
     }
-
 })
 
 const Contact = (props) => {
 
     const { classes } = props;
+    const { button, header, panel } = classes;
 
     return (
         <div className='alignLeft'>
-            <h1 className={classes.header}>Contact Me!</h1>
-            <div className={classes.panel}>
-
-                {/* <Typography variant="p" align="center">LinkedIn: https://www.linkedin.com/in/michael-n-preston/</Typography>
-                <Typography variant="p" align="center">Mobile: (817) 565-2372</Typography>
-                <Typography variant="p" align="center">Email: michael.n.preston@gmail.com</Typography> */}
-
-                <ListItem>Mobile: (817) 565-2372</ListItem>
-                <ListItem>Email: michael.n.preston@gmail.com</ListItem>
-                <ListItem><a href="https://www.linkedin.com/in/michael-n-preston/">LinkedIn</a></ListItem>
-
+            <h1 className={header}>Contact Me!</h1>
+            <div className={panel}>
+                <ul>
+                    <ListItem>Mobile: (817) 565-2372</ListItem>
+                    <ListItem>Email: michael.n.preston@gmail.com</ListItem>
+                    <Button className={button} href="https://www.linkedin.com/in/michael-n-preston/">
+                        <Icon className="fab fa-linkedin" />
+                    </Button>
+                </ul>
             </div>
         </div>
     )
