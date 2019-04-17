@@ -8,9 +8,9 @@ import CardActions from "@material-ui/core/CardActions";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import CardMedia from '@material-ui/core/CardMedia';
-
-// import {Link} from 'react-router-dom';
-// import Typography from "@material-ui/core/Typography";
+import Typography from "@material-ui/core/Typography";
+import Landing from '../Landing';
+import {Link} from 'react-router-dom';
 // import CardTitle from '@material-ui/core/CardTitle';
 
 const styles = theme => ({
@@ -34,34 +34,47 @@ const styles = theme => ({
         height: 0,
         paddingTop: '56.25%', // 16:9
     },
-  });
+    button: {
+        color: 'white',
+        backgroundColor: "#f20c4a"
+    }
+});
 
 const Project = (props) => {
 
-    const {classes} = props;
-    const {grid, actions, card, toolbar} = classes;
-    const {name, img, description, url} = props;
+    const { classes } = props;
+    const { grid, actions, card, toolbar } = classes;
+    const { name, img, description, url, tech } = props;
 
     console.log('img: ', img || "", 'name', name, 'desc:', description, 'url:', url);
+    console.log('tech:', tech)
 
     return (
         <Grid
             item xs={10}
             className={grid}
-            >
+        >
             <Card className={card}>
                 <CardHeader
                     title={name}
                     subheader={description}
-                    />
+                />
                 <CardMedia
                     title={name}
                     image={"public/images/Me.jpg" || 'noimage'}
                 />
                 <CardContent>
-                    {/* <Typography component="p">
-                        {description}
-                    </Typography> */}
+                    {
+                        tech &&
+                        <ul>
+                            <h6>Tech Stack: </h6>
+                            {tech.map((technology, index) =>
+                                <Typography component="li" key={index}>
+                                    {technology}
+                                    {/* <Link to='/'>Click Me!</Link> */}
+                                </Typography>)}
+                        </ul>
+                    }
                 </CardContent>
                 <CardActions className={actions} disableActionSpacing>
                     <Button
