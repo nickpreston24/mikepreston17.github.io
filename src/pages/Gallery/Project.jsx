@@ -1,6 +1,8 @@
 import React from 'react';
-import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
+
+/** MUI */
+import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
@@ -9,6 +11,11 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from "@material-ui/core/Typography";
+import Tooltip from '@material-ui/core/Tooltip';
+
+/** Font Awesome */
+import Icon from '@material-ui/core/Icon';
+import classNames from 'classnames';
 
 const styles = theme => ({
     grid: {
@@ -25,26 +32,40 @@ const styles = theme => ({
     },
     card: {
         color: 'blue',
-        "max-width": "700px"
+        // backgroundColor: 'cyan',
+        "max-width": "90%"
     },
     media: {
         height: 0,
         paddingTop: '56.25%', // 16:9
     },
-    button: {
+    playButton: {
         color: 'white',
-        backgroundColor: "#f20c4a"
-    }
+        backgroundColor: "#f20c4a",
+        margin: '10px',
+        fontSize: "250%",
+    },
+    sourceButton: {
+        color: '#f20c4a',
+        backgroundColor: "black",
+        margin: '10px',
+        fontSize: "250%",
+    },
+    icon: {
+        boxSizing: 'border-box',
+        fontSize: 48,
+        textAlign: 'center'
+    },
 });
 
 const Project = (props) => {
 
     const { classes } = props;
-    const { grid, actions, card, toolbar } = classes;
-    const { name, img, description, url, tech } = props;
+    const { grid, actions, card, media, toolbar, playButton, sourceButton } = classes;
+    const { name, img, description, liveLink, tech } = props;
 
-    console.log('img: ', img || "", 'name', name, 'desc:', description, 'url:', url);
-    console.log('tech:', tech)
+    img && console.log('img: ', img);
+    // console.log('tech:', tech)
 
     return (
         <Grid
@@ -58,7 +79,8 @@ const Project = (props) => {
                 />
                 <CardMedia
                     title={name}
-                    image={"public/images/Me.jpg" || 'noimage'}
+                    className={media}
+                    image={img || 'noimage'}
                 />
                 <CardContent>
                     {
@@ -73,14 +95,27 @@ const Project = (props) => {
                     }
                 </CardContent>
                 <CardActions className={actions} disableActionSpacing>
-                    <Button
-                        variant="contained"
-                        size="small"
-                        href={url}
-                        className={toolbar}
-                    >
-                        Play
-                    </Button>
+                    <Tooltip title={'Play ' + name} aria-label={name}>
+                        <Button
+                            variant="contained"
+                            size="small"
+                            href={liveLink}
+                            alt={name}
+                            className={playButton}
+                        >
+                            <Icon className={classNames(classes.icon, 'fas fa-play-circle')} />
+                        </Button>
+                    </Tooltip>
+                    <Tooltip title={name + ' repo'} aria-label={name}>
+                        <Button
+                            variant="contained"
+                            size="small"
+                            href={liveLink}
+                            className={sourceButton}
+                        >
+                            <Icon className={classNames(classes.icon, 'fab fa-github')} />
+                        </Button>
+                    </Tooltip>
                 </CardActions>
 
             </Card>

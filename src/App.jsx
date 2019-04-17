@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-import './App.css';
 import { BrowserRouter as Router, Redirect, Switch, Route } from 'react-router-dom';
 import SlantedNavbar from './navbars/Slanted'
 
-import About from './pages/about';
-import Landing from './pages/Landing';
-import Contact from './pages/contact';
-import Resume from './pages/Resume';
-import Gallery from './pages/Gallery';
+import { About, Landing, Contact, Resume, Gallery } from './pages';
+
+// Font Awesome:
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faStroopwafel, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+
+import './App.css';
+
+// library.add(faStroopwafel, faPlayCircle)
 
 class App extends Component {
     render() {

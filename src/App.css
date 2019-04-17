@@ -39,9 +39,3 @@ body {
      /* '& > * ': { margin: 20 };
      '& button': { borderRadius: 24; borderWidth: 2; }; */
 }
-
-span {
-    font-size: 65px;
-    letter-spacing: 2px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}

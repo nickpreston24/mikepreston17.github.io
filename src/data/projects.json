@@ -1,6 +1,6 @@
 [
     {
-        "url": "https://kiyapp.herokuapp.com",
+        "liveLink": "https://kiyapp.herokuapp.com",
         "name": "Kiy'app",
         "tech": [
             "React",
@@ -9,10 +9,11 @@
             "Node",
             "Mongo"
         ],
+        "img": "images/Kiyap-Sign-Up.gif",
         "description": "Find your local sifu!  Kiy'app connects prospective students to Martial Arts teachers!  No more guesswork or trial & error!"
     },
     {
-        "url": "https://modemsoperandi.herokuapp.com/",
+        "liveLink": "https://modemsoperandi.herokuapp.com/",
         "name": "Modems Operandi",
         "tech": [
             "Python",
@@ -23,7 +24,7 @@
         "description": "Create a gaming PC on a budget!"
     },
     {
-        "url": "https://epic-books.herokuapp.com/",
+        "liveLink": "https://epic-books.herokuapp.com/",
         "name": "Epic Book Search",
         "tech": [
             "React",
@@ -34,7 +35,7 @@
         "description": "Search and store your favorite books from Google!"
     },
     {
-        "url": "https://mikepreston17.github.io/mem-berries/",
+        "liveLink": "https://mikepreston17.github.io/mem-berries/",
         "name": "Memberries",
         "img": "organic-blueberries.jpg",
         "tech": [
@@ -43,7 +44,7 @@
         "description": "A berry-themed memory game.  Click on the berries only once and get a high score!"
     },
     {
-        "url": "https://mikepreston17.github.io/GifTastic/",
+        "liveLink": "https://mikepreston17.github.io/GifTastic/",
         "name": "Gif-Tastic",
         "tech": [
             "html",
@@ -54,7 +55,7 @@
         "description": "Search Gifs (...and cats)!"
     },
     {
-        "url": "https://soupstore.herokuapp.com",
+        "liveLink": "https://soupstore.herokuapp.com",
         "name": "The Soup Store",
         "tech": [
             "html",
@@ -64,7 +65,7 @@
         "description": "You can't buy clothes here."
     },
     {
-        "url": "https://burger-nom.herokuapp.com/",
+        "liveLink": "https://burger-nom.herokuapp.com/",
         "name": "Burger Nom",
         "tech": [
             "handlebars js",
@@ -74,7 +75,7 @@
         "description": "Eat a cow"
     },
     {
-        "url": "https://find-me-mates.herokuapp.com/",
+        "liveLink": "https://find-me-mates.herokuapp.com/",
         "name": "Find me mates",
         "tech": [
             "Bootstrap 4",

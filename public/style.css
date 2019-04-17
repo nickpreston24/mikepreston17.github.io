@@ -146,7 +146,7 @@ body {
 }
 
 span {
-    font-size: 65px;
+    /* font-size: 65px; */
     letter-spacing: 2px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
