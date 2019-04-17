@@ -12,12 +12,32 @@ body {
     position: relative;
     top: 40px;
     margin: 0 auto;
+}
 
-    /**FIXME: The following is temporary to allow all content to display
-        TODO: Make it so content slides to left away from the navbar when it is opened.
-        (See Kiyap transitions)
-    */
-    float: left;
+/**FIXME: The following is temporary to allow all content to display
+    TODO: Make it so content slides to left away from the navbar when it is opened.
+    (See Kiyap transitions)
+*/
+.alignLeft {
+    color: 'white';
+    box-sizing: 'border-box';
+    padding: 20;
+    max-width: 480;
+    z-Index: 1;
+    position: relative;
+    top: 10%;
+    max-width: 50%;
+    display: 'flex';
+    flex-flow: 'column nowrap';
+    float: 'left';
+    justify-content: 'center';
+    transition: 'opacity 0.3s linear 0.0s !important';
+     /* 'div.active > &': {
+         opacity: 1;
+         transition: 'opacity 0.5s linear 0.5s !important';
+     }; */
+     /* '& > * ': { margin: 20 };
+     '& button': { borderRadius: 24; borderWidth: 2; }; */
 }
 
 span {

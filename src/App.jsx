@@ -7,7 +7,7 @@ import About from './pages/about';
 import Landing from './pages/Landing';
 import Contact from './pages/contact';
 import Resume from './pages/Resume';
-import Gallery from './pages/Resume/projects';
+import Gallery from './pages/Gallery/projects';
 
 class App extends Component {
     render() {

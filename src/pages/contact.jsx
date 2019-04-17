@@ -27,7 +27,7 @@ const Contact = (props) => {
     const { classes } = props;
 
     return (
-        <div className='container'>
+        <div className='alignLeft'>
             <h1 className={classes.header}>Contact Me!</h1>
             <div className={classes.panel}>
 

@@ -50,7 +50,7 @@ const About = (props) => {
     const { grid, card, headers } = classes;
 
     return (
-        <div className="container">
+        <div className="alignLeft">
             <nav className="navbar navbar-expand-md navbar-dark bg-dark shadow-lg p-3 mb-5 rounded">
                 <a className="navbar-brand accent"
                     href="#">About Me</a>
