@@ -61,8 +61,9 @@ const styles = theme => ({
 const Project = (props) => {
 
     const { classes } = props;
-    const { grid, actions, card, media, toolbar, playButton, sourceButton } = classes;
-    const { name, img, description, liveLink, tech } = props;
+    const { grid, actions, card, media, toolbar,
+        playButton, sourceButton } = classes;
+    const { name, img, description, liveLink, repo, tech } = props;
 
     img && console.log('img: ', img);
 
@@ -109,7 +110,7 @@ const Project = (props) => {
                         <Button
                             variant="contained"
                             size="small"
-                            href={liveLink}
+                            href={repo}
                             className={sourceButton}
                         >
                             <Icon className={classNames(classes.icon, 'fab fa-github')} />
