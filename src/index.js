@@ -5,26 +5,35 @@ import App from './App';
 import axios from 'axios';
 
 var projects = require('./data/projects.json');
+console.log('projects:', projects)
 
 /** Project Pinging */
-function pingAll (urls) {
-    if(!urls || urls.length == 0)
+function pingAll(urls) {
+    if (!urls || urls.length == 0 || urls.some(url => !url)) {
+        console.log('no urls or some null!')
         return;
+    }
 
+    console.log('finding urls: ', urls);
     axios.all([
-        urls.map(url=>axios.get(url))
+        urls.map(url => axios.get(url))
     ])
-    .catch(console.error)
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
-pingAll(projects.map(p=>p.url));
+pingAll(projects.map(p => p.liveLink));
 
 /** Main Render */
 ReactDOM.render(
-  <Router>
-    <App projects={projects} />
-  </Router>,
-  document.getElementById('root')
+    <Router>
+        <App projects={projects} />
+    </Router>,
+    document.getElementById('root')
 );
 
 /**  Slider Animations */
