@@ -1,6 +1,7 @@
 [
     {
         "liveLink": "https://kiyapp.herokuapp.com",
+        "repo": "https://github.com/mikepreston17/kiyap",
         "name": "Kiy'app",
         "tech": [
             "React",
