@@ -49,4 +49,5 @@ function closeMenu(event) {
 }
 
 navButton.addEventListener('click', openMenu, false);
+//TODO: Add a button the the navbar for closing, instead of just anywhere in the window!
 win.addEventListener('click', closeMenu, false);
