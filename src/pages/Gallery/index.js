@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./Project";
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 

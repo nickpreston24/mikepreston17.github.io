@@ -36,7 +36,7 @@ const styles = theme => ({
     },
   });
 
-const ProjectCard = (props) => {
+const Project = (props) => {
 
     const {classes} = props;
     const {grid, actions, card, toolbar} = classes;
@@ -79,8 +79,8 @@ const ProjectCard = (props) => {
     )
 }
 
-ProjectCard.propTypes = {
+Project.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(ProjectCard);
+export default withStyles(styles)(Project);
