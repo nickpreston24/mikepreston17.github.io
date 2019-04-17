@@ -9,9 +9,6 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from "@material-ui/core/Typography";
-import Landing from '../Landing';
-import {Link} from 'react-router-dom';
-// import CardTitle from '@material-ui/core/CardTitle';
 
 const styles = theme => ({
     grid: {
@@ -71,7 +68,6 @@ const Project = (props) => {
                             {tech.map((technology, index) =>
                                 <Typography component="li" key={index}>
                                     {technology}
-                                    {/* <Link to='/'>Click Me!</Link> */}
                                 </Typography>)}
                         </ul>
                     }
