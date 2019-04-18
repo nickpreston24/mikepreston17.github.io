@@ -59,7 +59,7 @@ const About = (props) => {
                 <h2 className={headers.h2} >In my spare time I enjoy...</h2>
             </Jumbotron>
             <Grid
-                item xs={14}
+                item xs={16}
                 className={grid}
             >
                 <GridList>
