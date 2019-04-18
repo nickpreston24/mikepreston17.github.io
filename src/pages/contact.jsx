@@ -46,11 +46,13 @@ const Contact = (props) => {
                 <ul>
                     <ListItem>Mobile: (817) 565-2372</ListItem>
                     <ListItem>Email: michael.n.preston@gmail.com</ListItem>
+
                     <Tooltip title="Shoot me an Email!">
                         <Button className={classNames(button, shadow)} href={"mailto:" + email}>
                             <Icon className="far fa-envelope-open" />
                         </Button>
                     </Tooltip>
+
                     <Tooltip title="Let's Connect!">
                         <Button className={classNames(button, shadow)} href="https://www.linkedin.com/in/michael-n-preston/">
                             <Icon className="fab fa-linkedin" />
@@ -58,9 +60,14 @@ const Contact = (props) => {
                     </Tooltip>
 
                     <Tooltip title="Copy to clipboard">
-
                         <Button className="btn" data-clipboard-text={email}>
                             <Icon className="far fa-clipboard" />
+                        </Button>
+                    </Tooltip>
+
+                    <Tooltip title="Download my Resume!">
+                        <Button download href="/content/Michael Preston - Resume 2019 Full Stack Engineer.docx">
+                            <Icon className="fas fa-download" />
                         </Button>
                     </Tooltip>
 
