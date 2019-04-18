@@ -5,6 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import Tooltip from '@material-ui/core/Tooltip';
 import Button from "@material-ui/core/Button";
 import ClipboardJS from 'clipboard';
+import classNames from 'classnames';
 
 const styles = theme => ({
     header: {
@@ -57,7 +58,7 @@ const Contact = (props) => {
                     </Tooltip>
 
                     <Tooltip title="Copy to clipboard">
-                        <Button className={button} data-clipboard-text={email}>
+                        <Button className={classNames(button, "btn")} data-clipboard-text={email}>
                             <Icon className="fas fa-clipboard" />
                         </Button>
                     </Tooltip>
