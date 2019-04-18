@@ -52,8 +52,7 @@ const About = (props) => {
     return (
         <div className="alignLeft">
             <nav className="navbar navbar-expand-md navbar-dark bg-dark shadow-lg p-3 mb-5 rounded">
-                <a className="navbar-brand accent"
-                    href="#">About Me</a>
+                <a className="navbar-brand accent">About Me</a>
             </nav>
             <Jumbotron>
                 <h2 className={headers.h2} >In my spare time I enjoy...</h2>
