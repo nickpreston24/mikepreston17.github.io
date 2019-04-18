@@ -4,7 +4,6 @@ import Icon from '@material-ui/core/Icon';
 import ListItem from '@material-ui/core/ListItem';
 import Tooltip from '@material-ui/core/Tooltip';
 import Button from "@material-ui/core/Button";
-import classNames from 'classnames';
 import ClipboardJS from 'clipboard';
 
 const styles = theme => ({
@@ -19,24 +18,22 @@ const styles = theme => ({
     projects: {
         color: 'hotpink',
     },
-
     panel: {
         background: "#fff"
     },
     button: {
         border: '1px solid transparent',
-        color: 'red',
-        margin: '3px'
-    },
-    shadow: {
+        color: '#f20c4a',
+        margin: '3px',
+        background: 'paper',
         "box-shadow": "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)"
-    }
+    },
 })
 
 const Contact = (props) => {
 
     const { classes } = props;
-    const { button, header, panel, shadow } = classes;
+    const { button, header, panel } = classes;
     const email = "michael.n.preston@gmail.com";
 
     return (
@@ -48,25 +45,25 @@ const Contact = (props) => {
                     <ListItem>Email: michael.n.preston@gmail.com</ListItem>
 
                     <Tooltip title="Shoot me an Email!">
-                        <Button className={classNames(button, shadow)} href={"mailto:" + email}>
+                        <Button className={button} href={"mailto:" + email}>
                             <Icon className="far fa-envelope-open" />
                         </Button>
                     </Tooltip>
 
                     <Tooltip title="Let's Connect!">
-                        <Button className={classNames(button, shadow)} href="https://www.linkedin.com/in/michael-n-preston/">
+                        <Button className={button} href="https://www.linkedin.com/in/michael-n-preston/">
                             <Icon className="fab fa-linkedin" />
                         </Button>
                     </Tooltip>
 
                     <Tooltip title="Copy to clipboard">
-                        <Button className="btn" data-clipboard-text={email}>
-                            <Icon className="far fa-clipboard" />
+                        <Button className={button} data-clipboard-text={email}>
+                            <Icon className="fas fa-clipboard" />
                         </Button>
                     </Tooltip>
 
                     <Tooltip title="Download my Resume!">
-                        <Button download href="/content/Michael Preston - Resume 2019 Full Stack Engineer.docx">
+                        <Button className={button} download href="/content/Michael Preston - Resume 2019 Full Stack Engineer.docx">
                             <Icon className="fas fa-download" />
                         </Button>
                     </Tooltip>
