@@ -1,8 +1,8 @@
 [
     {
+        "name": "Kiy'app",
         "liveLink": "https://kiyapp.herokuapp.com",
         "repo": "https://github.com/mikepreston17/kiyap",
-        "name": "Kiy'app",
         "tech": [
             "React",
             "Firebase",
@@ -14,8 +14,9 @@
         "description": "Find your local sifu!  Kiy'app connects prospective students to Martial Arts teachers!  No more guesswork or trial & error!"
     },
     {
-        "liveLink": "https://modemsoperandi.herokuapp.com/",
         "name": "Modems Operandi",
+        "liveLink": "https://modemsoperandi.herokuapp.com/",
+        "repo": "https://github.com/ScottW1731/ModemsOperandi",
         "tech": [
             "Python",
             "MySQL",
@@ -25,8 +26,9 @@
         "description": "Create a gaming PC on a budget!"
     },
     {
-        "liveLink": "https://epic-books.herokuapp.com/",
         "name": "Epic Book Search",
+        "liveLink": "https://epic-books.herokuapp.com/",
+        "repo": "https://github.com/MikePreston17/nyt-google-books",
         "tech": [
             "React",
             "Express",
@@ -36,8 +38,9 @@
         "description": "Search and store your favorite books from Google!"
     },
     {
-        "liveLink": "https://mikepreston17.github.io/mem-berries/",
         "name": "Memberries",
+        "liveLink": "https://mikepreston17.github.io/mem-berries/",
+        "repo": "https://github.com/MikePreston17/mem-berries",
         "img": "organic-blueberries.jpg",
         "tech": [
             "React"
@@ -45,8 +48,9 @@
         "description": "A berry-themed memory game.  Click on the berries only once and get a high score!"
     },
     {
-        "liveLink": "https://mikepreston17.github.io/GifTastic/",
         "name": "Gif-Tastic",
+        "liveLink": "https://mikepreston17.github.io/GifTastic/",
+        "repo": "https://github.com/MikePreston17/GifTastic",
         "tech": [
             "html",
             "CSS",
@@ -56,8 +60,9 @@
         "description": "Search Gifs (...and cats)!"
     },
     {
-        "liveLink": "https://soupstore.herokuapp.com",
         "name": "The Soup Store",
+        "liveLink": "https://soupstore.herokuapp.com",
+        "repo": "https://github.com/MikePreston17/soup-store",
         "tech": [
             "html",
             "CSS",
@@ -66,8 +71,9 @@
         "description": "You can't buy clothes here."
     },
     {
-        "liveLink": "https://burger-nom.herokuapp.com/",
         "name": "Burger Nom",
+        "liveLink": "https://burger-nom.herokuapp.com/",
+        "repo": "https://github.com/MikePreston17/burger",
         "tech": [
             "handlebars js",
             "Express",
@@ -76,8 +82,9 @@
         "description": "Eat a cow"
     },
     {
+        "name": "Friend Finder",
         "liveLink": "https://find-me-mates.herokuapp.com/",
-        "name": "Find me mates",
+        "repo": "https://github.com/MikePreston17/friend-finder",
         "tech": [
             "Bootstrap 4",
             "MySQL"
