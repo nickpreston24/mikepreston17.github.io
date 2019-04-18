@@ -13,6 +13,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from "@material-ui/core/Typography";
 import Tooltip from '@material-ui/core/Tooltip';
 import Chip from '@material-ui/core/Chip';
+import red from '@material-ui/core/colors/red';
 
 /** Font Awesome */
 import Icon from '@material-ui/core/Icon';
@@ -46,9 +47,13 @@ const styles = theme => ({
         backgroundColor: "#f20c4a",
         margin: '10px',
         fontSize: "250%",
+        //Special hover color :)
+        '&:hover': {
+            color: red[800],
+        },
     },
     sourceButton: {
-        color: '#f20c4a',
+        color: "#1ce",
         backgroundColor: "black",
         margin: '10px',
         fontSize: "250%",
@@ -56,7 +61,8 @@ const styles = theme => ({
     icon: {
         boxSizing: 'border-box',
         fontSize: 48,
-        textAlign: 'center'
+        textAlign: 'center',
+        margin: theme.spacing.unit * 2,
     },
     chip: {
         margin: '3px'
@@ -64,6 +70,9 @@ const styles = theme => ({
     header: {
         color: "#f20c4a",
         "font-weight": "bold"
+    },
+    shadow: {
+        "box-shadow": "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)"
     }
 });
 
@@ -71,10 +80,9 @@ const Project = (props) => {
 
     const { classes } = props;
     const { grid, actions, card, media,
-        playButton, sourceButton, chip, header } = classes;
+        playButton, sourceButton, chip, header, shadow } = classes;
     const { name, img, description, liveLink, repo, tech } = props;
 
-    // img && console.log('img: ', img);
     console.log('size:', card.size);
     return (
         <Grid
@@ -104,12 +112,6 @@ const Project = (props) => {
                     }
                 </CardContent>
 
-                {img && <CardMedia
-                    title={name}
-                    className={media}
-                    image={img || 'noimage'}
-                />}
-
                 <CardActions className={actions} disableActionSpacing>
                     <Tooltip title={'Play ' + name} aria-label={name}>
                         <Button
@@ -117,7 +119,7 @@ const Project = (props) => {
                             size="small"
                             href={liveLink}
                             alt={name}
-                            className={playButton}
+                            className={classNames(playButton, shadow)}
                         >
                             <Icon className={classNames(classes.icon, 'fas fa-play-circle')} />
                         </Button>
@@ -127,12 +129,19 @@ const Project = (props) => {
                             variant="contained"
                             size="small"
                             href={repo}
-                            className={sourceButton}
+                            className={classNames(sourceButton, shadow)}
                         >
                             <Icon className={classNames(classes.icon, 'fab fa-github')} />
                         </Button>
                     </Tooltip>
                 </CardActions>
+
+                {img && <CardMedia
+                    title={name}
+                    className={media}
+                    image={img || 'noimage'}
+                />}
+
             </Card>
         </Grid>
     )
