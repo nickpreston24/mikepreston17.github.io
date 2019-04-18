@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import ProjectCard from "./Project";
+import Project from "./Project";
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     header2: {
         color: '#fff'
-    }
+    },
+    // grid: {
+    //     size: theme.spacing.unit
+    // },
+    root: {
+        flexGrow: 1,
+    },
+    paper: {
+        height: 140,
+        width: 100,
+    },
+    control: {
+        padding: theme.spacing.unit * 2,
+    },
 })
-
-// const path = __dirname + '/images';
-// console.log('path:', path)
-
-// const images = require('./images');
-// console.log('images: ', images);
 
 export default withStyles(styles)(class Gallery extends Component {
 
@@ -26,14 +33,18 @@ export default withStyles(styles)(class Gallery extends Component {
     render() {
 
         const { classes } = this.props;
-
+        const { size } = classes;
+        console.log('size:', size)
         return (
             <div className='alignLeft' style={{ zIndex: 2 }}>
                 <ul>
                     <h2 className={classes.header2}>Projects: </h2>
-                    <Grid container spacing={16}>
+
+                    <Grid container spacing={size || 16}>
+                    {/* <Grid item> */}
+
                         {this.projects.map((project, index) => (
-                            <ProjectCard
+                            <Project
                                 key={index}
                                 {...project}
                             />
