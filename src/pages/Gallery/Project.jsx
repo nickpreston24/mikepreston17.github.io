@@ -12,6 +12,7 @@ import Button from "@material-ui/core/Button";
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from "@material-ui/core/Typography";
 import Tooltip from '@material-ui/core/Tooltip';
+import Chip from '@material-ui/core/Chip';
 
 /** Font Awesome */
 import Icon from '@material-ui/core/Icon';
@@ -32,7 +33,8 @@ const styles = theme => ({
     },
     card: {
         color: 'blue',
-        "max-width": "90%"
+        "max-width": "90%",
+        size: theme.spacing.unit
     },
     media: {
         height: 0,
@@ -56,44 +58,58 @@ const styles = theme => ({
         fontSize: 48,
         textAlign: 'center'
     },
+    chip: {
+        margin: '3px'
+    },
+    header: {
+        color: "#f20c4a",
+        "font-weight": "bold"
+    }
 });
 
 const Project = (props) => {
 
     const { classes } = props;
-    const { grid, actions, card, media, toolbar,
-        playButton, sourceButton } = classes;
+    const { grid, actions, card, media,
+        playButton, sourceButton, chip, header } = classes;
     const { name, img, description, liveLink, repo, tech } = props;
 
-    img && console.log('img: ', img);
-
+    // img && console.log('img: ', img);
+    console.log('size:', card.size);
     return (
         <Grid
-            item xs={10}
+            item lg={10}
             className={grid}
         >
             <Card className={card}>
+
                 <CardHeader
                     title={name}
                     subheader={description}
                 />
+
+                <CardContent>
+                    {
+                        tech &&
+                        <div>
+                            <h6 className={header}>Tech Stack: </h6>
+                            {tech.map((technology, index) =>
+                                <Chip
+                                    label={technology}
+                                    className={chip}
+                                    color='primary'
+                                    variant='default'
+                                />)}
+                        </div>
+                    }
+                </CardContent>
+
                 {img && <CardMedia
                     title={name}
                     className={media}
                     image={img || 'noimage'}
                 />}
-                <CardContent>
-                    {
-                        tech &&
-                        <ul>
-                            <h6>Tech Stack: </h6>
-                            {tech.map((technology, index) =>
-                                <Typography component="li" key={index}>
-                                    {technology}
-                                </Typography>)}
-                        </ul>
-                    }
-                </CardContent>
+
                 <CardActions className={actions} disableActionSpacing>
                     <Tooltip title={'Play ' + name} aria-label={name}>
                         <Button
