@@ -10,7 +10,7 @@
             "Node",
             "Mongo"
         ],
-        "img": "images/Kiyap-Sign-Up.gif",
+        "img": "images/Kiyap-Search-Schools.gif",
         "description": "Find your local sifu!  Kiy'app connects prospective students to Martial Arts teachers!  No more guesswork or trial & error!"
     },
     {
@@ -41,7 +41,7 @@
         "name": "Memberries",
         "liveLink": "https://mikepreston17.github.io/mem-berries/",
         "repo": "https://github.com/MikePreston17/mem-berries",
-        "img": "organic-blueberries.jpg",
+        "img": "images/Memberries-Game.gif",
         "tech": [
             "React"
         ],
@@ -52,7 +52,7 @@
         "liveLink": "https://mikepreston17.github.io/GifTastic/",
         "repo": "https://github.com/MikePreston17/GifTastic",
         "tech": [
-            "html",
+            "Html5",
             "CSS",
             "jQuery",
             "giphy api"
@@ -64,7 +64,7 @@
         "liveLink": "https://soupstore.herokuapp.com",
         "repo": "https://github.com/MikePreston17/soup-store",
         "tech": [
-            "html",
+            "Html5",
             "CSS",
             "handlebars"
         ],
