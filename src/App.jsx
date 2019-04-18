@@ -28,8 +28,8 @@ class App extends Component {
                         <Route path='/aboutme' component={About} />
                         <Route path='/contact' component={Contact} />
                         <Route path="/resume" component={Resume} />
-                        <Route render={() => <h1>Page not found</h1>} />
                         <Redirect to="/" />
+                        {/* <Route render={() => <h1>Page not found</h1>} /> */}
                     </Switch>
                 </Router>
             </>
