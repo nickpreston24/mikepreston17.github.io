@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Section from '../../experimental/Section';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
 
 //IDEA: A rotating cube would be fun here
 // Icons clicked allow user to rotate between Education, Summary, Recent Projects, etc.
 
 const styles = theme => ({
-    header1: {
-        color: '#000'
+    header: {
+        color: '#fff'
     },
 
     paragraph: {
@@ -63,9 +65,16 @@ class Resume extends Component {
 
         console.log('render my resume from JSON: ', this.resume);
 
-        return this.resume.sections ?
-            <DynamicResume resume={this.resume} {...this.props} />
-            : <StaticResume resume={this.resume} {...this.props} />
+        return (
+            <div className="container">
+                <Button download href="/content/Michael Preston - Resume 2019 Full Stack Engineer.docx">
+                    <Icon className="fas fa-download" />
+                </Button>
+                {this.resume.sections ?
+                    <DynamicResume resume={this.resume} {...this.props} />
+                    : <StaticResume resume={this.resume} {...this.props} />}
+            </div>
+        )
     }
 }
 
@@ -88,14 +97,14 @@ const DynamicResume = props => {
 
 const StaticResume = (props) => {
 
-    const { header1, experience, paragraph, creations, panel, alignLeft, toggleRight } = props.classes;
+    const { header, experience, paragraph, creations, panel, alignLeft, toggleRight } = props.classes;
     // let container = 'container';
 
     return (
 
         <div className={alignLeft}>
             <div>
-                <h1 className={header1}>Summary</h1>
+                <h1 className={header}>Summary</h1>
                 <p className={paragraph}>
                     A quick and constant learner with a background in Computer Science and software development, an attention to detail, who currently has his sights set on a full-time web development position.  Effective in maintaining product quality and functionality, enhancing data integrity, utilizing best practices to craft unique and powerful software.  Known for adaptability, energy, and collaboration during all stages of development.
                     </p>
@@ -104,7 +113,7 @@ const StaticResume = (props) => {
                     </p>
             </div>
             <div>
-                <h1 className={header1}>Education</h1>
+                <h1 className={header}>Education</h1>
 
                 <p className={paragraph}>
                     <strong>Southern Methodist University, Dallas, Texas</strong>
@@ -119,7 +128,7 @@ const StaticResume = (props) => {
                     </p>
             </div>
             <div>
-                <h1 className={header1}>Recent Creations</h1>
+                <h1 className={header}>Recent Creations</h1>
 
                 <p className={paragraph}><strong>Kiy'app</strong></p>
 
@@ -144,7 +153,7 @@ const StaticResume = (props) => {
 
             </div>
             <div>
-                <h1 className={header1}>Work Experience</h1>
+                <h1 className={header}>Work Experience</h1>
                 <strong>Solutions Developer - Cottonwood Financial</strong>
                 <i> May 2017 to June 2018</i>
                 <ul className={experience}>
