@@ -46,6 +46,28 @@ const About = (props) => {
             <nav className="navbar navbar-expand-md navbar-dark bg-dark shadow-lg p-3 mb-5 rounded">
                 <a className="navbar-brand accent">About Me</a>
             </nav>
+
+            <Jumbotron className={jumbo}>
+                <h2>Brand Statement</h2>
+            </Jumbotron>
+            <Grid
+                item xs={12}
+                className={grid}>
+                <GridList>
+                    <GridListTile cols={1}>
+                        <Card className={card}>
+                            <CardHeader title="Brand Statement" />
+                            <CardContent>
+                                <Typography className={card} component="p">
+                                    Full Stack Web Developer with a background in .NET development.  I am known for my  ability to find solutions that lead to success, foster team cohesion, pursue excellence, and work with a high degree of integrity.  I enjoy helping fixing others' problems, big or small.  I felt a need to explore the tech world and keep up to date with the latest and greatest techniques, practices and ideas.  I sought out a bootcamp to both help prepare a professional portfolio and learn some front-end technologies that inspire.
+                                    I completed the bootcamp through Southern Methodist University where I expanded my knowledge in Javascript, ES6/7, MERN stack, and RESTful APIs.  I believe my tech skills combined with my ability to handle multiple projects and work well across organizations that make me a valuable asset to any team.
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </GridListTile>
+                </GridList>
+            </Grid>
+
             <Jumbotron className={jumbo}>
                 <h2>In my spare time I enjoy...</h2>
             </Jumbotron>
