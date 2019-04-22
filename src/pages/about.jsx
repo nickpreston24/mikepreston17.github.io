@@ -68,6 +68,8 @@ const About = (props) => {
                 </GridList>
             </Grid>
 
+            <br/>
+
             <Jumbotron className={jumbo}>
                 <h2>In my spare time I enjoy...</h2>
             </Jumbotron>
