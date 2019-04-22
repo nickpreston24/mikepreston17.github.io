@@ -59,9 +59,9 @@ const About = (props) => {
                             <CardHeader title="Organic Cooking" />
                             <CardContent>
                                 <Typography className={card} component="p">
-                                    I learn (self-taught) to cook, whipping up recipes from my imagination and writing the successful (i.e. not burnt) ones down.  My only rule is that all ingredients must be Organic - it all tastes so much better!
+                                    I learned (self-taught) to cook, whipping up recipes from my imagination and writing the successful (i.e. not burnt) ones down.  My rule is that all ingredients must be Organic - it all tastes so much better!
 
-                                    Since starting in 2015, I've been known to test out my creations on my family and peers!  My favorite tools is my Instant Pot: anything can be thrown in it and you got a meal.
+                                    Since starting in 2015, I've been known to test out my creations on my family and peers!  My favorite tool is my Instant Pot: anything can be thrown in it and you got a meal.
 
                                     I'm particular to making sweets, namely ice cream and cookies, but I've been looking to expand into baked goods.
                                 </Typography>
@@ -74,11 +74,11 @@ const About = (props) => {
                             <CardHeader title="Martial Arts" />
                             <CardContent>
                                 <Typography component="p">
-                                    My interest in martial arts stemmed from seeing others perform when I was a kid - I'd always wanted to be able to Karate chop a block in half.  So far, I've managed to do a decent job on boards whereas concrete HURTS!
+                                    My interest in martial arts stemmed from seeing others perform when I was a kid - I'd always wanted to be able to Karate chop a block in half.  So far, I've managed to do a decent job on boards; concrete HURTS!
 
-                                    I've done quite a bit in my first 20 or so years.  In college I joined the Texas Blackbelt Academy's Taekwondo class and the Fencing Club.  Training to parry, riposte and jab enhanced my tone and wits while kicking shields improved my flexibility.
+                                    I've done quite a bit in my first 20 or so years.  In college I joined the Texas Blackbelt Academy's Taekwondo class and the Fencing Club.  Training to parry, riposte and jab enhanced my tone and wits while kicking shields, executing forms and sparring improved my flexibility.
 
-                                    In additon to my belts in Taekwondo, in 2019 I achieved an orange belt in Krav Maga.
+                                    In additon to my two belts in Taekwondo, in 2019 I achieved an orange belt in Krav Maga.
 
                                 </Typography>
                             </CardContent>
