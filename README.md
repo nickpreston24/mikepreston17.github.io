@@ -1,4 +1,4 @@
-# mpreston.github.io
-Creations Portfolio
+# ![mikepreston17.github.io](mikepreston17.github.io)
+My personal Portfolio site, detailing my acomplishments, projects and skills!
 
-**refurbished with React!**
+**Refurbished with React!**
