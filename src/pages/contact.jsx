@@ -11,14 +11,6 @@ const styles = theme => ({
     header: {
         color: '#fff'
     },
-    paragraph: {
-        color: '#c44',
-        fontSize: '24'
-    },
-
-    projects: {
-        color: 'hotpink',
-    },
     panel: {
         background: "#fff"
     },
