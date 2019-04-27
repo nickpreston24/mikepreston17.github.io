@@ -13,16 +13,16 @@ const styles = theme => ({
     },
 
     paragraph: {
-        color: '#c44',
+        color: '#fff',
         fontSize: '24'
     },
 
     creations: {
-        color: 'hotpink',
+        color: '#ff4',
     },
 
     experience: {
-        color: 'skyblue',
+        color: '#c44',
     },
 
     panel: {
