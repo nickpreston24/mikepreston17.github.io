@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Section from '../../experimental/Section';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
+import classNames from 'classnames';
 
 //IDEA: A rotating cube would be fun here
 // Icons clicked allow user to rotate between Education, Summary, Recent Projects, etc.
@@ -18,17 +19,18 @@ const styles = theme => ({
     },
 
     creations: {
-        color: '#ff4',
+        color: '#fff',
     },
 
     experience: {
-        color: '#c44',
+        color: '#fff',
     },
 
     panel: {
-        background: "#fff",
+        background: '#111',
         float: "left",
     },
+
     alignLeft: {
         color: 'white',
         boxSizing: 'border-box',
@@ -81,7 +83,7 @@ class Resume extends Component {
 const DynamicResume = props => {
 
     const { sections } = props.resume;
-    // const { header1, experience, paragraph, creations, panel } = props.classes;
+    // const { header, experience, paragraph, creations, panel } = props.classes;
 
     // console.log('sections:', sections)
     // console.log('props: ', props)
@@ -102,7 +104,7 @@ const StaticResume = (props) => {
 
     return (
 
-        <div className={alignLeft}>
+        <div className={classNames(alignLeft, panel)}>
             <div>
                 <h1 className={header}>Summary</h1>
                 <p className={paragraph}>
