@@ -7,9 +7,6 @@ const styles = theme => ({
     header2: {
         color: '#fff'
     },
-    // grid: {
-    //     size: theme.spacing.unit
-    // },
     root: {
         flexGrow: 1,
     },
@@ -18,11 +15,15 @@ const styles = theme => ({
         width: 100,
     },
     control: {
-        padding: theme.spacing.unit * 2,
+        padding: theme.spacing(2),
     },
+    // grid: {
+    //     size: theme.spacing(1)
+    // },
 })
 
-export default withStyles(styles)(class Gallery extends Component {
+export default withStyles(styles)(
+class Gallery extends Component {
 
     projects = []
 
@@ -34,15 +35,13 @@ export default withStyles(styles)(class Gallery extends Component {
 
         const { classes } = this.props;
         const { size } = classes;
-        console.log('size:', size)
+        // console.log('size:', size)
         return (
             <div className='alignLeft' style={{ zIndex: 2 }}>
                 <ul>
                     <h2 className={classes.header2}>Projects: </h2>
 
-                    <Grid container spacing={size || 16}>
-                    {/* <Grid item> */}
-
+                    <Grid container spacing={size || 10}>
                         {this.projects.map((project, index) => (
                             <Project
                                 key={index}

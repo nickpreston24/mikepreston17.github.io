@@ -10,7 +10,7 @@ import Recommendations from './recommendations';
 
 const styles = theme => ({
     grid: {
-        //   padding: theme.spacing.unit * 2,
+        padding: theme.spacing(2),
         margin: "auto",
         position: "relative",
         top: "25 %",

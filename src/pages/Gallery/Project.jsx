@@ -10,7 +10,6 @@ import CardActions from "@material-ui/core/CardActions";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import CardMedia from '@material-ui/core/CardMedia';
-import Typography from "@material-ui/core/Typography";
 import Tooltip from '@material-ui/core/Tooltip';
 import Chip from '@material-ui/core/Chip';
 import red from '@material-ui/core/colors/red';
@@ -21,7 +20,7 @@ import classNames from 'classnames';
 
 const styles = theme => ({
     grid: {
-        padding: theme.spacing.unit * 100,
+        padding: theme.spacing(2),
         margin: "auto",
         position: "relative",
         top: "25 %",
@@ -35,7 +34,7 @@ const styles = theme => ({
     card: {
         color: 'blue',
         "max-width": "90%",
-        size: theme.spacing.unit
+        size: theme.spacing(1)
     },
     media: {
         height: 0,
@@ -62,7 +61,7 @@ const styles = theme => ({
         boxSizing: 'border-box',
         fontSize: 48,
         textAlign: 'center',
-        margin: theme.spacing.unit * 2,
+        margin: theme.spacing(2),
     },
     chip: {
         margin: '3px'
@@ -83,7 +82,7 @@ const Project = (props) => {
         playButton, sourceButton, chip, header, shadow } = classes;
     const { name, img, description, liveLink, repo, tech } = props;
 
-    console.log('size:', card.size);
+    // console.log('size:', card.size);
     return (
         <Grid
             item lg={10}
@@ -107,12 +106,13 @@ const Project = (props) => {
                                     className={chip}
                                     color='primary'
                                     variant='default'
+                                    key={index}
                                 />)}
                         </div>
                     }
                 </CardContent>
 
-                <CardActions className={actions} disableActionSpacing>
+                <CardActions className={actions} disableactionspacing="true">
                     <Tooltip title={'Play ' + name} aria-label={name}>
                         <Button
                             variant="contained"

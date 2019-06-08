@@ -8,7 +8,7 @@ import classNames from 'classnames';
 
 const links = [
     { route: '/', name: 'HOME', icon: 'fas fa-home' },
-    { route: '/projects', name: 'GALLERY', icon: 'far fa-images' },
+    { route: '/projects', name: 'PORTFOLIO', icon: 'far fa-images' },
     { route: '/contact', name: 'CONTACT', icon: 'fas fa-mobile-alt' },
     { route: '/resume', name: 'RESUME', icon: 'fas fa-user-tie' },
     { route: '/aboutme', name: 'ABOUT', icon: 'far fa-address-card' },
@@ -17,7 +17,6 @@ const styles = theme => ({
     iconStyle:
     {
         marginRight: '15px',
-        // padding: '1px'
     }
 })
 
@@ -25,9 +24,6 @@ const SlantedNavbar = (props) => {
 
     const { classes } = props;
     const { iconStyle } = classes;
-    console.log('iconStyle:', iconStyle)
-    console.log('classes:', classes)
-    console.log('props:', props)
 
     return (
         <div className="container">

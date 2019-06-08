@@ -5,22 +5,22 @@ import App from './App';
 import axios from 'axios';
 
 var projects = require('./data/projects.json');
-console.log('projects:', projects)
+// console.log('projects:', projects)
 
-/** Project Pinging */
+/** Pinging my projects by url so they are ready */
 function pingAll(urls) {
     if (!urls || urls.length == 0 || urls.some(url => !url)) {
-        console.log('no urls or some null!')
+        console.log('Could not find urls or some loaded as null!')
         return;
     }
 
-    console.log('finding urls: ', urls);
+    // console.log('finding urls: ', urls);
     axios.all([
         urls.map(url => axios.get(url))
     ])
-        .then(function (response) {
-            console.log(response);
-        })
+        // .then(function (response) {
+            // console.log(response);
+        // })
         .catch(function (error) {
             console.log(error);
         });
