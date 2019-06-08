@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import withStyles from '@material-ui/core/styles';
-import { compose } from 'recompose';
+import React from 'react';
+// import withStyles from '@material-ui/core/styles';
+// import { compose } from 'recompose';
 
 // const withCustomStyles = styles => Tag => {
 
