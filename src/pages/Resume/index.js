@@ -155,10 +155,18 @@ const StaticResume = (props) => {
             </div>
             <div>
                 <h1 className={header}>Work Experience</h1>
+
+                <strong>Triencon Services Inc - Junior Full Stack Engineer (contract)</strong>
+                <i>May 2019 - present</i>
+
+                <ul className={experience}>
+                    <li>Constructed a security layer within Oncor’s meter tracking system to interact with their existing n-tier architecture by establishing a WebAPI using. NETCore.</li>
+                </ul>
+
                 <strong>Solutions Developer - Cottonwood Financial</strong>
                 <i> May 2017 to June 2018</i>
                 <ul className={experience}>
-                    <li>Architected, coded and maintained the Serenity Loan Engine Validator, increasing loan schedule throughput by up to 1500%</li>
+                    <li>Designed, coded and maintained the Serenity Loan Engine Validator, increasing loan schedule throughput by up to 1500%</li>
                     <li>Collaborated with senior developers on an architectural redesign of loan queues, decreasing turnaround for overnight tasks</li>
                     <li>Recognized by manager for tackling new technologies and assigned ambassadorship over the Dataview 360 web service endpoint synchronization software</li>
                     <li><i>WPF, C#, WCF, & Entity Framework</i></li>
@@ -167,9 +175,9 @@ const StaticResume = (props) => {
                 <i> October 2014 to March 2017</i>
                 <ul className={creations}>
                     <li>Developed in-house desktop tools for Accounting by reverse-engineering Access databases, which reconciled open items and payment data using Infragistics API</li>
-                    <li>Designed and implemented an archive manager application for the IT Department from scratch using the .NET Framework and WPF/C# MVVM controls</li>
+                    <li>Designed and implemented an archive manager application for the IT Department from scratch using the .NET Framework, C# and custom WPF controls, freeing up crucial memory for the HOYA Universal Translator</li>
                     <li>Published in-production services to the Hoya Universal Translator system responsible for parsing lens order files to Hoya databases by creating a custom extraction library via Regular Expressions</li>
-                    <li><i>WPF, Winforms, C#, .NET Framework, Entity Framework</i></li>
+                    {/* <li><i>WPF, Winforms, C#, .NET Framework, Entity Framework</i></li> */}
                 </ul>
                 <strong>Software Contractor – US Airways</strong>
                 <i> April 2014 to August 2014</i>
