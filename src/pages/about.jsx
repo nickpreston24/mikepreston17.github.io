@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles, MuiThemeProvider } from '@material-ui/core';
+import { withStyles } from '@material-ui/core';
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
@@ -45,7 +45,7 @@ const styles = theme => ({
 const About = (props) => {
 
     const { classes } = props;
-    const { grid, card, jumbo, navbar } = classes;
+    const { card, jumbo } = classes;
 
     return (
         <div className="alignLeft">

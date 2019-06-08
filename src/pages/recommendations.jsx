@@ -39,7 +39,7 @@ const styles = theme => ({
 
 const Recommendations = (props) => {
 
-    const { linkedIn, recommendation, header, jumbo, card } = props.classes;
+    const { linkedIn, recommendation, jumbo, card } = props.classes;
 
     return (
         <div>

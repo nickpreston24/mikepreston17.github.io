@@ -9,7 +9,7 @@ var projects = require('./data/projects.json');
 
 /** Pinging my projects by url so they are ready */
 function pingAll(urls) {
-    if (!urls || urls.length == 0 || urls.some(url => !url)) {
+    if (!urls || urls.length === 0 || urls.some(url => !url)) {
         console.log('Could not find urls or some loaded as null!')
         return;
     }

@@ -56,16 +56,15 @@ class Resume extends Component {
     resume = {};
 
     componentWillMount() {
-        const myResume = require('../../data/resume.json');
-
         // FIXME: Commented this out as it's not yet ready for Production.
+        // const myResume = require('../../data/resume.json');
         // this.resume = myResume;
         // console.log('my resume: ', this.resume);
     }
 
     render() {
 
-        console.log('render my resume from JSON: ', this.resume);
+        // console.log('render my resume from JSON: ', this.resume);
 
         return (
             <div className="container">
@@ -99,7 +98,7 @@ const DynamicResume = props => {
 
 const StaticResume = (props) => {
 
-    const { header, experience, paragraph, creations, panel, alignLeft, toggleRight } = props.classes;
+    const { header, experience, paragraph, creations, panel, alignLeft } = props.classes;
     // let container = 'container';
 
     return (

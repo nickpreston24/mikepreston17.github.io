@@ -67,6 +67,7 @@ const Contact = (props) => {
     )
 };
 
+// eslint-disable-next-line
 var clipboard = new ClipboardJS('.btn');
 // clipboard.destroy(); //TODO: Use in componentWillUnmount or destructor.
 
