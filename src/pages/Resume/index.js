@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Section from '../../experimental/Section';
+import Section, {AirtableSection} from '../../experimental/Section';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import classNames from 'classnames';
+
+import { getByName } from '../../airtable'
 
 //IDEA: A rotating cube would be fun here
 // Icons clicked allow user to rotate between Education, Summary, Recent Projects, etc.
@@ -30,7 +32,13 @@ const styles = theme => ({
         background: '#111',
         float: "left",
     },
-
+    button: {
+        border: '1px solid transparent',
+        color: '#f20c4a',
+        margin: '3px',
+        background: 'paper',
+        "box-shadow": "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)"
+    },
     alignLeft: {
         color: 'white',
         boxSizing: 'border-box',
@@ -55,29 +63,99 @@ class Resume extends Component {
 
     resume = {};
 
-    componentWillMount() {
-        // FIXME: Commented this out as it's not yet ready for Production.
-        // const myResume = require('../../data/resume.json');
-        // this.resume = myResume;
-        // console.log('my resume: ', this.resume);
+    constructor(props) 
+    {
+        super(props);
+        const { classes } = props;        
+        const { button } = classes;
+    }
+
+    // async componentWillMount() {
+    // }
+
+    loadResume() {
+        var promise = getByName('Test resume');
+        console.log('loadresume=>promise: ', promise);
+        return promise;
+        // const storedResume = sessionStorage.getItem("resume-json");
+        // if(!storedResume)
+        // {
+        // this.resume = await getByName('Test resume');
+        // // sessionStorage.setItem("resume-json", this.resume);
+        // console.log('Updated resume: ', this.resume);
+        // }
+        // {
+        //     console.log('Stored resume: ', storedResume);
+        // }
+    }
+
+    componentDidMount() {
+
+        console.log('This happens 3rd.');
+
+        this.setState({ loading: 'true' });
+        this.loadResume()
+            .then((data) => {
+                console.log('This happens 7th.');
+                this.setState({
+                    resume: data,
+                    loading: 'false'
+                });
+                console.log('set resume: ', this.state.resume);
+            });
     }
 
     render() {
 
-        // console.log('render my resume from JSON: ', this.resume);
+        // console.log('render my resume from JSON: ', this.state.resume);
+        // console.log('data: ', this.data);
 
+        // if (this.state.loading === 'initial') {
+        //     console.log('This happens 2nd - after the class is constructed. You will not see this element because React is still computing changes to the DOM.');
+        //     return <h2>Intializing...</h2>;
+        // }
+        //
+        //
+        // if (this.state.loading === 'true') {
+        //     console.log('This happens 5th - when waiting for data.');
+        //     return <h2>Loading...</h2>;
+        // }
+        console.log("has resume? ",!!this.state);
+        this.resume = !!this.state ? this.state.resume : null;
         return (
             <div className="container">
-                <Button download href="/content/Michael Preston - Resume 2019 Full Stack Engineer.docx">
+                <Button
+                 download href="/content/Michael Preston - Resume 2019 Full Stack Engineer.docx">
                     <Icon className="fas fa-download" />
                 </Button>
-                {this.resume.sections ?
-                    <DynamicResume resume={this.resume} {...this.props} />
-                    : <StaticResume resume={this.resume} {...this.props} />}
+                {/*{!!this.resume.fields ? <AirTableResume resumeName='Test Resume'  resume={this.resume} {...this.props} /> : null}*/}
+                {!!this.resume ? <AirTableResume resumeName='Test Resume'  resume={this.state.resume} {...this.props} /> : null}
+                {/*{this.resume.sections ?*/}
+                {/*    <DynamicResume resume={this.resume} {...this.props} />*/}
+                {/*    : <StaticResume resume={this.resume} {...this.props} />}*/}
             </div>
         )
     }
 }
+
+const AirTableResume = props => {
+    const {resumeName, resume} = props;
+    const {sections: fields} =  resume;
+
+    // console.log('found resume: ', resume);
+    // console.log('props: ', props);
+    console.log('fields?', !!resume.fields, resume.fields);
+
+    return !!fields ? (
+        <div className='container'>
+            <h2>Rawr, I am a resume {resumeName}!</h2>
+            {fields.map((section, index) =>
+                <AirtableSection key={index} styles={styles}  {...section} />
+            )}
+        </div>
+    ) : null
+}
+
 
 const DynamicResume = props => {
 
@@ -107,11 +185,20 @@ const StaticResume = (props) => {
             <div>
                 <h1 className={header}>Summary</h1>
                 <p className={paragraph}>
-                    A quick and constant learner with a background in Computer Science and software development, an attention to detail, who currently has his sights set on a full-time web development position.  Effective in maintaining product quality and functionality, enhancing data integrity, utilizing best practices to craft unique and powerful software.  Known for adaptability, energy, and collaboration during all stages of development.
+                A dedicated Full Stack Web Developer with a passion to never stop improving. Known for collaboration, quick thinking, study, adaptability, and high energy
+during all stages of software development. Recognized for maintaining product quality,
+security and functionality, enhancing data integrity as well as utilizing best practices to craft unique and
+powerful software.
                     </p>
                 <p className={paragraph}>
-                    <strong>Techical Skills:</strong> React, Node JS, Material UI, Bootstrap, Express, Mongo, C#/Java, MySQL, Design Patterns, Project management, Agile, Object Oriented Design.
+                    <strong>Techical Skills:</strong> React JS, C#, Java, Python, Git, GitHub, TFS, .NET Core, Entity Framework Core, RESTful Web APIs, Node JS, Express JS, MongoDB, MySql, SQL Server, Material UI, Bootstrap, C++, C.
                     </p>
+
+                <p className={paragraph}>
+                    <strong>Additional Skills:</strong> Knowledge of Design Patterns, Project management, Bug Tracking, UML, Object
+Oriented Design, and SOLID Principles, Agile Methodologies, MVC, MVVM, working knowledge of Linux
+distros.
+                </p>
             </div>
             <div>
                 <h1 className={header}>Education</h1>
@@ -134,8 +221,9 @@ const StaticResume = (props) => {
                 <p className={paragraph}><strong>Kiy'app</strong></p>
 
                 <ul className={creations}>
-                    <li>Connects prospective martial arts students to schools and personal trainers by the types of training they seek for a smoother experience in choosing a discipline and ranking up, using a relational database schema and role-based authentication</li>
-                    <li>Employs a full MERN stack with, Mobx, Firebase, and MySQL</li>
+                    <li>Connects prospective martial arts students to schools and personal trainers by discipline for a
+smoother experience in choosing a dojo by employing a MySQL relational schema, role-based
+authentication in Firebase and Mobx state management</li>
                     <a href="https://kiyapp.herokuapp.com/">Live site </a>
                     and <a href="https://github.com/mikepreston17/kiyap">Code</a>
                 </ul>
@@ -157,10 +245,16 @@ const StaticResume = (props) => {
                 <h1 className={header}>Work Experience</h1>
 
                 <strong>Triencon Services Inc - Junior Full Stack Engineer (contract)</strong>
-                <i>May 2019 - present</i>
+                <i>May 2019 - September 2019</i>
 
                 <ul className={experience}>
-                    <li>Constructed a security layer within Oncor’s meter tracking system to interact with their existing n-tier architecture by establishing a WebAPI using. NETCore.</li>
+                    <li>Led the team in Cybersecurity efforts with the HPE Fortify code scan &amp; auditing tool, catching key
+information leaks and risky Javascript modules on the Navy Grid project for the Department of
+Defense</li>
+                    <li>Constructed a security layer within Oncor’s meter tracking system to interact with their existing n-
+tier architecture, established using DotNetCore 2.2 and JSON Web Tokens as authentication and
+authorization</li>
+                <li>Performed automated unit tests using NCrunch and functional, smoke, regression and end-to-end testing using a combination of Cypress JS and Swagger</li>
                 </ul>
 
                 <strong>Solutions Developer - Cottonwood Financial</strong>
