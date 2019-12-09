@@ -1,6 +1,6 @@
 import Landing from './Landing';
-import Contact from './contact';
-import About from './about';
+import Contact from './Contact';
+import About from './About';
 import Resume from './Resume';
 import Gallery from './Gallery'
 

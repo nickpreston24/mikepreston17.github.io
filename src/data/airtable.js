@@ -1,4 +1,4 @@
-import config from './config';
+import config from '../config';
 
 const apiKey = config.airtable_api_key;
 const baseId = config.airtable_base;
@@ -16,16 +16,16 @@ const getByName = async resumeName =>
       })
       .eachPage(
         (records, fetchNextPage) => {
-          let ret;
+          let data;
           records
             .filter(record => !!record.get('Name'))
             .forEach((record) => {
-              ret = record;
+              data = record;
               // console.log('Retrieved', record.get('Name'));
             });
 
           fetchNextPage();
-          resolve(ret);
+          resolve(data);
         },
         err => {
           if (err) {

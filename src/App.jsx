@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Redirect, Switch, Route } from 'react-router-dom';
-import SlantedNavbar from './navbars/Slanted'
+import SlantedNavbar from './components/navbars/Slanted'
 import { About, Landing, Contact, Resume, Gallery } from './pages';
 
 import './App.css';

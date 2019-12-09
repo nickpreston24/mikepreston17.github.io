@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Project from "./Project";
+import ProjectCard from "./ProjectCard";
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -43,7 +43,7 @@ class Gallery extends Component {
 
                     <Grid container spacing={size || 10}>
                         {this.projects.map((project, index) => (
-                            <Project
+                            <ProjectCard
                                 key={index}
                                 {...project}
                             />

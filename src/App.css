@@ -1,5 +1,5 @@
 body {
-    background-image: url(florida-beach-sunset-1920x1080.jpg);
+    background-image: url('./images/florida-beach-sunset-1920x1080.jpg');
     background-size: cover;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
