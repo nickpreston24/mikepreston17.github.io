@@ -6,6 +6,8 @@ const StaticResume = (props) => {
     const { header, experience, paragraph, creations, panel, alignLeft } = props.classes;
     // let container = 'container';
 
+    console.log(props)
+
     return (
 
         <div className={classNames(alignLeft, panel)}>

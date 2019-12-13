@@ -1,4 +1,4 @@
-import config from '../config';
+import config from '../../config';
 
 const apiKey = config.airtable_api_key;
 const baseId = config.airtable_base;
@@ -7,11 +7,16 @@ const Airtable = require('airtable');
 
 const base = new Airtable({ apiKey }).base(baseId);
 
-const getByName = async resumeName =>
+/**
+ * Get an Airtable Base by name w/ records
+ * @param {Get
+ * } baseName 
+ */
+const getByName = async baseName =>
   await new Promise((resolve, reject) => {
-    base('Resume')
+    base(baseName) // e.g. 'Projects'
       .select({
-        maxRecords: 3,
+        // maxRecords: 3,
         view: 'Grid view'
       })
       .eachPage(
@@ -21,7 +26,6 @@ const getByName = async resumeName =>
             .filter(record => !!record.get('Name'))
             .forEach((record) => {
               data = record;
-              // console.log('Retrieved', record.get('Name'));
             });
 
           fetchNextPage();

@@ -75,14 +75,14 @@ const styles = theme => ({
     }
 });
 
-const ProjectCard = (props) => {
+const ProjectCard = ({ classes, ...props }) => {
 
-    const { classes } = props;
     const { grid, actions, card, media,
-        playButton, sourceButton, chip, header, shadow } = classes;
+        playButton, sourceButton, chip, header, shadow
+    } = classes;
+    
     const { name, img, description, liveLink, repo, tech } = props;
 
-    // console.log('size:', card.size);
     return (
         <Grid
             item lg={10}

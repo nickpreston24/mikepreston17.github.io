@@ -3,29 +3,26 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import StaticResume from './static'
-import { getByName } from '../../data/airtable'
+import { getByName } from '../../data/apis/airtable'
 
 const styles = theme => ({
     header: {
         color: '#fff'
     },
-
     paragraph: {
         color: '#fff',
         fontSize: '24'
     },
-
     creations: {
         color: '#fff',
     },
-
     experience: {
         color: '#fff',
     },
-
     panel: {
-        background: '#111',
+        background: '#222',
         float: "left",
+        zIndex: -51,
     },
     button: {
         border: '1px solid transparent',
@@ -39,7 +36,6 @@ const styles = theme => ({
         boxSizing: 'border-box',
         padding: 20,
         maxwidth: 480,
-        zIndex: 1,
         display: 'flex',
         flexFlow: 'column nowrap',
         float: 'left',
@@ -48,7 +44,8 @@ const styles = theme => ({
         // 'div.active > &': {
         //     opacity: 1,
         //     transition: 'opacity 0.5s linear 0.5s !important',
-        // },
+        // },import { classNames } from 'classnames';
+
         // '& > * ': { margin: 20 },
         // '& button': { borderRadius: 24, borderWidth: 2, },
     },
@@ -61,11 +58,12 @@ class Resume extends Component {
     constructor(props) {
         super(props);
         const { classes } = props;
-        const { button } = classes;
+        // console.log('classes', classes)
+        const { button, header } = classes;
     }
 
-    loadResume() {
-        var promise = getByName('Test resume');
+    async loadResume() {
+        var promise = getByName('Resumes');
         console.log('loadresume=>promise: ', promise);
         return promise;
     }
@@ -80,16 +78,18 @@ class Resume extends Component {
                     loading: 'false'
                 });
             });
+        console.log(this.resume)
     }
 
     render() {
         this.resume = !!this.state ? this.state.resume : null;
         return (
             <div className="container">
+                {/* <h1 className={header}>Resume</h1> */}
                 <Button
                     download href="/content/Michael Preston - Resume 2019 Full Stack Engineer.docx">
                     <Icon className="fas fa-download" />
-                </Button>                
+                </Button>
                 <StaticResume resume={this.resume} {...this.props} />
             </div>
         )

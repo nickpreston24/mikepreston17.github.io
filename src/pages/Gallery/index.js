@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import ProjectCard from "./ProjectCard";
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
@@ -17,40 +17,44 @@ const styles = theme => ({
     control: {
         padding: theme.spacing(2),
     },
-    // grid: {
-    //     size: theme.spacing(1)
-    // },
 })
 
-export default withStyles(styles)(
-class Gallery extends Component {
+// const Counter = () => {
+//     const [count, setCount] = useState(0);
+//     return (<button onClick={() => setCount(count + 1)}>{count}</button>)
+// }
 
-    projects = []
+export default withStyles(styles)
+    (
+        class Gallery extends Component {
 
-    componentWillMount() {
-        this.projects = this.props.projects || [];
-    }
+            projects = []
 
-    render() {
+            componentWillMount() {
+                this.projects = this.props.projects || [];
+            }
 
-        const { classes } = this.props;
-        const { size } = classes;
-        // console.log('size:', size)
-        return (
-            <div className='alignLeft' style={{ zIndex: 2 }}>
-                <ul>
-                    <h2 className={classes.header2}>Projects: </h2>
+            render() {
 
-                    <Grid container spacing={size || 10}>
-                        {this.projects.map((project, index) => (
-                            <ProjectCard
-                                key={index}
-                                {...project}
-                            />
-                        ))}
-                    </Grid>
-                </ul>
-            </div>
-        );
-    }
-})
+                const { classes } = this.props;
+                const { size } = classes;
+
+                return (
+                    <div className='alignLeft' style={{ zIndex: 2 }}>
+                        <ul>
+                            <h1 className={classes.header2}>Projects: </h1>
+
+                            <Grid container spacing={size || 10}>
+                                {this.projects.map((project, index) => (
+                                    <ProjectCard
+                                        key={index}
+                                        {...project}
+                                    />
+                                ))}
+                            </Grid>
+                        </ul>
+                    </div>
+                );
+            }
+        }
+    )

@@ -1,6 +1,6 @@
 [
     {
-        "name": "Kiy'app",
+        "name": "Kiyap",
         "liveLink": "https://kiyapp.herokuapp.com",
         "repo": "https://github.com/mikepreston17/kiyap",
         "tech": [
@@ -11,7 +11,7 @@
             "Mongo"
         ],
         "img": "images/Kiyap-Search-Schools.gif",
-        "description": "Find your local sifu!  Kiy'app connects prospective students to Martial Arts teachers!  No more guesswork or trial & error!"
+        "description": "Find your local sifu!  Kiyap connects prospective students to Martial Arts teachers!  No more guesswork or trial & error!"
     },
     {
         "name": "Modems Operandi",
